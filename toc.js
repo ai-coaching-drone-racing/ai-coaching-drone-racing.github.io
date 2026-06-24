@@ -80,6 +80,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.removeChild(textarea);
   }
 
+  document.querySelectorAll(".youtube-embed[data-ytid]").forEach((container) => {
+    container.querySelector(".yt-play").addEventListener("click", () => {
+      const id = container.dataset.ytid;
+      container.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&autoplay=1" title="AI Coaching paper overview video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    });
+  });
+
   document.querySelectorAll("[data-copy-target]").forEach((button) => {
     button.addEventListener("click", async () => {
       const target = document.getElementById(button.dataset.copyTarget);

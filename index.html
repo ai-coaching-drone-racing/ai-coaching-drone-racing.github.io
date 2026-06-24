@@ -1,333 +1,364 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Coaching</title>
-    <meta
-      name="description"
-      content="Project page for AI Coaching for Accelerating Human Skill Development with Reinforcement Learning."
-    />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>"
-    />
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260605-buttons" />
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [["\\(", "\\)"]],
-          macros: {
-            state: "\\mathbf{s}",
-            hstate: "\\theta",
-            action: "\\mathbf{a}",
-            human: "\\mathrm{H}",
-            ai: "\\mathrm{AI}",
-            transprob: "P",
-            reward: "r",
-            task: "\\mathrm{task}",
-            policy: "\\pi",
-            obsh: "o^{\\mathrm{H}}",
-            obsr: "o^{\\mathrm{AI}}",
-            jstate: "\\mathbf{j}",
-            discount: "\\gamma",
-            expectation: "\\mathbb{E}",
-            valfunc: "V",
-            ind: "\\mathrm{ind}",
-            blend: "\\lambda",
-            policyopt: "\\pi^*",
-          },
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Coaching</title>
+  <meta name="description"
+    content="Project page for AI Coaching for Accelerating Human Skill Development with Reinforcement Learning." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&family=Castoro&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260605-buttons" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        macros: {
+          state: "\\mathbf{s}",
+          hstate: "\\theta",
+          action: "\\mathbf{a}",
+          human: "\\mathrm{H}",
+          ai: "\\mathrm{AI}",
+          transprob: "P",
+          reward: "r",
+          task: "\\mathrm{task}",
+          policy: "\\pi",
+          obsh: "o^{\\mathrm{H}}",
+          obsr: "o^{\\mathrm{AI}}",
+          jstate: "\\mathbf{j}",
+          discount: "\\gamma",
+          expectation: "\\mathbb{E}",
+          valfunc: "V",
+          ind: "\\mathrm{ind}",
+          blend: "\\lambda",
+          policyopt: "\\pi^*",
         },
-        svg: {
-          fontCache: "global",
-        },
-      };
-    </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-  </head>
-  <body>
-    <aside class="toc" aria-label="Table of contents">
-      <h3>Content</h3>
-      <hr />
-      <nav>
-        <ul>
-          <li><a class="toc-link active" href="#overview">Title</a></li>
-          <li><a class="toc-link" href="#presentation">Overview Video</a></li>
-          <li><a class="toc-link" href="#formulation">Formulation</a></li>
-          <li><a class="toc-link" href="#method">Method</a></li>
-          <li><a class="toc-link" href="#results">Results</a></li>
-          <li><a class="toc-link" href="#trajectories">Trajectories</a></li>
-          <li><a class="toc-link" href="#adaptation">Assistance Adaptation</a></li>
-          <li><a class="toc-link" href="#simulation">Simulation</a></li>
-          <li><a class="toc-link" href="#training">Training</a></li>
-          <li><a class="toc-link" href="#citation">BibTeX</a></li>
-        </ul>
-      </nav>
-    </aside>
+      },
+      svg: {
+        fontCache: "global",
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
 
-    <main id="top" class="page">
-      <section id="overview" class="hero">
-        <div class="video-placeholder" aria-label="Project video">
-          <video autoplay muted playsinline loop preload="metadata" aria-label="AI Coaching intro video">
-            <source src="assets/aic_intro_7s.mp4" type="video/mp4" />
-          </video>
-          <div class="video-overlay">
-            <h1 id="main-title">
-              <span class="title-highlight">AI Coaching</span>
-              <span class="title-rest">for Accelerating Human Skill Development with Reinforcement Learning</span>
-            </h1>
-          </div>
-          <a class="scroll-cue" href="#paper-start" aria-label="Scroll to paper information">
-            <span>↓</span>
-          </a>
+<body>
+  <aside class="toc" aria-label="Table of contents">
+    <h3>Content</h3>
+    <hr />
+    <nav>
+      <ul>
+        <li><a class="toc-link active" href="#overview">Title</a></li>
+        <li><a class="toc-link" href="#presentation">Overview Video</a></li>
+        <li><a class="toc-link" href="#formulation">Formulation</a></li>
+        <li><a class="toc-link" href="#method">Method</a></li>
+        <li><a class="toc-link" href="#results">Results</a></li>
+        <li><a class="toc-link" href="#trajectories">Trajectories</a></li>
+        <li><a class="toc-link" href="#adaptation">Assistance Adaptation</a></li>
+        <li><a class="toc-link" href="#simulation">Simulation</a></li>
+        <li><a class="toc-link" href="#training">Training</a></li>
+        <li><a class="toc-link" href="#citation">BibTeX</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="top" class="page">
+    <section id="overview" class="hero">
+      <div class="video-placeholder" aria-label="Project video">
+        <video autoplay muted playsinline loop preload="metadata" aria-label="AI Coaching intro video">
+          <source src="assets/aic_intro_new.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+          <h1 id="main-title">
+            <span class="title-highlight">AI Coaching</span>
+            <span class="title-rest">for Accelerating Human Skill Development with Reinforcement Learning</span>
+          </h1>
         </div>
+        <a class="scroll-cue" href="#paper-start" aria-label="Scroll to paper information">
+          <span>↓</span>
+        </a>
+      </div>
 
-        <div id="paper-start" class="publication-header">
-          <h2><span class="title-highlight">AI Coaching</span> for Accelerating Human Skill Development with Reinforcement Learning</h2>
-          <p class="authors">
-            <span><a href="https://www.waybaba.com/">Wei Wang</a></span>
-            <span><a href="https://gelrignard.github.io/">Enlin Gu</a></span>
-            <span><a href="https://antonilo.github.io/">Antonio Loquercio</a></span>
-            <span><a href="https://haiminhu.org/">Haimin Hu</a><sup>†</sup></span>
-            <span><a href="https://www.seas.upenn.edu/~rahulm/">Rahul Mangharam</a><sup>†</sup></span>
-          </p>
-          <p class="author-note"><sup>†</sup>Equal advising</p>
-        </div>
+      <div id="paper-start" class="publication-header">
+        <h2><span class="title-highlight">AI Coaching</span> for Accelerating Human Skill Development with Reinforcement
+          Learning</h2>
+        <p class="authors">
+          <span><a href="https://www.waybaba.com/">Wei Wang</a></span>
+          <span><a href="https://gelrignard.github.io/">Enlin Gu</a></span>
+          <span><a href="https://antonilo.github.io/">Antonio Loquercio</a></span>
+          <span><a href="https://haiminhu.org/">Haimin Hu</a><sup>†</sup></span>
+          <span><a href="https://www.seas.upenn.edu/~rahulm/">Rahul Mangharam</a><sup>†</sup></span>
+        </p>
+        <p class="author-note"><sup>†</sup>Equal advising</p>
+      </div>
 
-        <p class="lead">
-          AI copilots are often designed to help people perform better right now. However, if the AI takes over too
-          much, the human may become dependent on it and fail to develop their own skill. This paper asks a different
-          question: <span class="question-highlight">can an AI system act as a coach rather than just an assistant?</span>
-          We study adaptive shared-control policies that change assistance based on the learner and the task context,
-          with the goal of building human skill that persists after the AI assistance is removed.
-        </p>
-      </section>
+      <p class="lead">
+        AI copilots can substantially boost human performance, but excessive assistance can induce over-reliance and
+        skill atrophy.
+        We study <span class="question-highlight">how an AI agent can act as a coach to accelerate
+          human motor-skill development</span>.
+        We argue that effective coaching requires strategic scaffolding and stepping back that are aligned with the
+        learner's capability, allowing <span class="question-highlight">productive failures</span> that drive learning.
+        We formalize the interactive AI coaching process as a non-cooperative dynamic game in which the coach targets
+        the learner's <span class="question-highlight">independent
+          competence</span>.
+        Building on this formalism, we develop a reinforcement learning framework to enable tractable training of
+        coaching policies.
+        <!-- AI copilots are often designed to help people perform better right now. However, if the AI takes over too
+        much, the human may become dependent on it and fail to develop their own skill. This paper asks a different
+        question: <span class="question-highlight">can an AI system act as a coach rather than just an assistant?</span>
+        We study adaptive shared-control policies that change assistance based on the learner and the task context,
+        with the goal of building human skill that persists after the AI assistance is removed. -->
+      </p>
+    </section>
 
-      <section id="presentation" class="section">
-        <h2>Overview Video</h2>
-        <p>
-          This presentation gives a high-level walkthrough of the paper: motivation, formulation, method, and user-study
-          results.
-        </p>
-        <div class="youtube-embed">
-          <iframe
-            src="https://www.youtube.com/embed/lpH-NsCTIWs?rel=0&modestbranding=1"
-            title="AI Coaching paper overview video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
+    <section id="presentation" class="section">
+      <h2>Overview Video</h2>
+      <p>
+        <!-- This presentation gives a high-level walkthrough of the paper: motivation, formulation, method, and user-study
+        results. -->
+      </p>
+      <div class="youtube-embed" data-ytid="lpH-NsCTIWs">
+        <img class="yt-thumb" src="https://img.youtube.com/vi/lpH-NsCTIWs/maxresdefault.jpg"
+          alt="AI Coaching Presentation thumbnail" />
+        <button class="yt-play" aria-label="Play AI Coaching presentation video"></button>
+      </div>
+    </section>
 
-      <section id="formulation" class="section">
-        <h2>Formulation</h2>
-        <p>
-          Formally, we cast the AI coaching problem as a two-player POSG, which we refer to as a Human--AI Coaching
-          Game. Coaching is fundamentally a non-cooperative game where the human and AI have different objectives: the
-          learner seeks to maximize task performance, while the <span class="coach-highlight">coach optimizes a
-          pedagogical objective</span>, namely the learner's independent competence.
-        </p>
-        <p>
-          A Human--AI Coaching Game is defined by the tuple
-          \[
-            \mathcal{G} =
-            \bigl(\mathcal{S},\mathcal{A},P,
-            \Theta,\mathcal{O}^{\mathrm{H}},\mathcal{O}^{\mathrm{AI}},
-            O^{\mathrm{H}},O^{\mathrm{AI}},r^{\mathrm{H}},r^{\mathrm{AI}},p_0,\gamma\bigr).
-          \]
-          Here, \(\mathcal{S}\) is the set of physical states, \(\mathcal{A}\) is the action set shared by the learner
-          and coach, and \(\Theta\subset[0,1]\) is a finite, totally ordered set of latent skill levels.
-        </p>
-        <p>
-          The joint transition captures how the physical states evolve and how the
-          <span class="coach-highlight">coach's actions</span> causally influence the learner's skill progression:
-        </p>
+    <section id="formulation" class="section">
+      <h2>Formalism: The Human-AI Coaching Game</h2>
+      <p>
+        Formally, we cast the AI coaching problem as a two-player partially observable stochastic game (POSG), which we
+        refer to as a Human-AI Coaching
+        Game.
+        We argue that coaching is fundamentally a <span class="coach-highlight">non-cooperative game</span> where the
+        human and AI have different objectives:
+        the
+        learner seeks to maximize task performance, while the coach optimizes a
+        pedagogical objective, namely the learner's <span class="coach-highlight">independent competence</span>.
+      </p>
+      <p>
+        A Human-AI Coaching Game is defined by the tuple
         \[
-          P(s', \theta' \mid s, \theta, a^{\mathrm{H}}, {\color{#990000}{a^{\mathrm{AI}}}}).
+        \mathcal{G} =
+        \bigl(\mathcal{S},\mathcal{A},P,
+        \Theta,\mathcal{O}^{\mathrm{H}},\mathcal{O}^{\mathrm{AI}},
+        O^{\mathrm{H}},O^{\mathrm{AI}},r^{\mathrm{H}},r^{\mathrm{AI}},p_0,\gamma\bigr).
         \]
-        <p>
-          The learner's objective is a task reward collected under the combined effect of their own actions and the
-          coach's intervention:
-        </p>
-        \[
-          r^{\mathrm{H}}(s_t, a^{\mathrm{H}}_t, {\color{#990000}{a^{\mathrm{AI}}_t}})
-          =
-          r^{\mathrm{task}}(s_t, a_t).
-        \]
-        <p>
-          The coach, however, is graded on a different, pedagogical exam: not how well the learner performs now with
-          help, but how well they will perform later without it. We define this as the Value of Independence:
-        </p>
-        \[
-          {\color{#990000}{r^{\mathrm{AI}}(s_t; \theta_t)}}
-          =
-          {\color{#990000}{
-          \mathbb{E}\!\left[
-            \sum_{k=0}^{\infty} \gamma^k\,
-            r^{\mathrm{task}}(s_{t+k},\, a^{\mathrm{H}}_{t+k})
-            \;\middle|\;
-            \begin{array}{l}
-              a^{\mathrm{H}}_{t+k} \sim \pi^{\mathrm{H}}(\cdot \mid o^{\mathrm{H}}_{t+k}; \theta_{t+k}), \\[2pt]
-              j_{t+k+1} \sim P(\cdot \mid j_{t+k},
-              a^{\mathrm{H}}_{t+k}, a^{\mathrm{AI}}_{t+k}=0)
-            \end{array}
-          \right]}}
-        \]
-        <p>
-          Intuitively, VoI asks: <em>if the coach were to walk away right now, how well would the learner perform?</em>
-          The AI coach implements shared control by fusing the learner's action with an expert baseline via the paper's
-          linear blending rule:
-        </p>
-        \[
-          a = \lambda \odot \pi^*(o^{\mathrm{AI}}) + (\mathbf{1}-\lambda) \odot a^{\mathrm{H}},
-        \]
-        <p>
-          where \(\lambda = \pi^{\mathrm{AI}}_{\lambda}(o^{\mathrm{AI}}) \in [0,1]^{\dim(\mathcal{A})}\) is a per-axis blending vector that
-          modulates the coach's assistance level, from 0 (no assistance) to 1 (full override).
-        </p>
-      </section>
+        Here, \(\mathcal{S}\) is the set of physical states, \(\mathcal{A}\) is the action set shared by the learner
+        and coach, and \(\Theta\subset[0,1]\) is a finite, totally ordered set of latent skill levels.
+      </p>
+      <p>
+        The joint transition captures how the physical states evolve and how the
+        coach's action <span class="coach-highlight">causally influence the learner's skill progressions</span>:
+      </p>
+      \[
+      P(s', \theta' \mid s, \theta, a^{\mathrm{H}}, a^{\mathrm{AI}}).
+      \]
+      <p>
+        The learner's objective is a task reward collected under the combined effect of their own actions and the
+        coach's intervention:
+      </p>
+      \[
+      r^{\mathrm{H}}(s_t, a^{\mathrm{H}}_t, a^{\mathrm{AI}}_t)
+      =
+      r^{\mathrm{task}}(s_t, a_t).
+      \]
+      <p>
+        The coach is graded on a different, pedagogical exam: not how well the learner performs now with
+        help, but how well they will perform later <span class="coach-highlight">without AI help</span>. We define this
+        as
+        the <span class="coach-highlight">Value of Independence (VoI)</span>:
+      </p>
+      \[
+      r^{\mathrm{AI}}(s_t; \theta_t)
+      =
+      \mathbb{E}\!\left[
+      \sum_{k=0}^{\infty} \gamma^k\,
+      r^{\mathrm{task}}(s_{t+k},\, a^{\mathrm{H}}_{t+k})
+      \;\middle|\;
+      \begin{array}{l}
+      a^{\mathrm{H}}_{t+k} \sim \pi^{\mathrm{H}}(\cdot \mid o^{\mathrm{H}}_{t+k}; \theta_{t+k}), \\[2pt]
+      j_{t+k+1} \sim P(\cdot \mid j_{t+k},
+      a^{\mathrm{H}}_{t+k}, a^{\mathrm{AI}}_{t+k}=0)
+      \end{array}
+      \right]
+      \]
+      <p>
+        Intuitively, VoI asks: <em>if the coach were to walk away right now, how well would the learner perform?</em>
+      </p>
+      <p>
+        The AI coach teaches primarily through <span class="coach-highlight">physical</span> interventions: it
+        implements <span class="coach-highlight">shared control</span> by fusing the learner's action with
+        an expert control via an adaptive blending rule:
+      </p>
+      \[
+      a = \lambda \odot \pi^*(o^{\mathrm{AI}}) + (\mathbf{1}-\lambda) \odot a^{\mathrm{H}},
+      \]
+      <p>
+        where \(\lambda = \pi^{\mathrm{AI}}_{\lambda}(o^{\mathrm{AI}}) \in [0,1]^{\dim(\mathcal{A})}\) is a per-axis
+        blending vector that
+        modulates the coach's assistance level, continuously from 0 (no assistance) to 1 (full override).
+      </p>
+    </section>
 
-      <section id="method" class="section">
-        <h2>Method</h2>
-        <p>
-          To train a coaching policy, we augment the robot's transition dynamics with two learner-side components: a
-          skill-conditioned control policy, and a model of how the learner's latent skill evolves in response to
-          coaching events such as successful or failed task attempts.
-        </p>
-        <p>
-          At deployment, the coach maintains a belief over learner skill and uses the learned blending policy to combine
-          the learner command with the expert action, allowing the system to scaffold or step back according to the
-          learner and task context.
-        </p>
-        <figure>
-          <img src="assets/overview.png" alt="L2C training and deployment overview" />
-          <figcaption>
-            Overview of L2C: simulation-time coach training, adaptive action blending, and live coaching with skill belief.
-          </figcaption>
-        </figure>
-      </section>
+    <section id="method" class="section">
+      <h2>Method: Learning to Coach (L2C)</h2>
+      <p>
+        We show that the Human-AI Coaching Game can be effectively reduced to a POMDP amenable to model-free <span
+          class="coach-highlight">reinforcement learning</span>.
+        To enable scalable, GPU-parallelized training of the coaching policy, we augment the robot's physical dynamics
+        with two lightweight learner-side components grounded in cognitive science: a skill-conditioned noisily-rational
+        control policy, and a probabilistic model of how the learner's latent skill evolves in response to coaching
+        events such as success or failure on task attempts.
+      </p>
+      <p>
+        At deployment, the coach maintains a belief state over learner skill and uses the learned blending policy to
+        combine
+        the learner command with the expert action, allowing the system to execute <span
+          class="coach-highlight">personalized scaffoldding or stepping
+          back</span> according to the inferred learner skill level and task context.
+      </p>
+      <figure>
+        <img src="assets/overview.png" alt="L2C training and deployment overview" />
+        <figcaption>
+          Overview of L2C: RL-based coach training, adaptive action blending, and live coaching with skill
+          belief.
+        </figcaption>
+      </figure>
+    </section>
 
-      <section id="results" class="section">
-        <h2>Experimental Results</h2>
-        <p>
-          We conducted a user study with \(N=33\) participants from diverse drone-flying backgrounds in a high-fidelity
-          FPV drone racing simulator. Each participant was randomly assigned to one of three AI coaches:
-          <span class="method-badge method-l2c">L2C</span> and two baselines,
-          <span class="method-badge method-rbf">RBF</span> and <span class="method-badge method-mia">MIA</span>. We
-          measure human skill change with two metrics: lap time and failure count.
-        </p>
-        <p>
-          For <span class="method-badge method-l2c">L2C</span>, a paired-samples t-test comparing pre- and
-          post-coaching lap times yielded a mean reduction of \(27.9\%\) with \(p=0.005\) and Cohen's \(d_z=-1.08\).
-          Similarly, a paired t-test on per-lap failure count yielded a mean reduction of 3.52 failures per lap with
-          \(p \lt 0.001\) and Cohen's \(d_z=-2.13\).
-        </p>
-        <p>
-          For <span class="method-badge method-rbf">RBF</span>, paired tests showed no reliable change in lap time, but
-          the paired test on failure count showed significance. For <span class="method-badge method-mia">MIA</span>,
-          paired tests showed no reliable change in lap time or failure count. All four between-method contrasts favor
-          <span class="method-badge method-l2c">L2C</span> with medium-to-large effect sizes.
-        </p>
-        <figure>
-          <img src="assets/results.png" alt="Experimental results comparing L2C, RBF, and MIA" />
-          <figcaption>
-            After coaching, learners trained with L2C show significant reductions in lap time and failure count and
-            report higher safety, performance, agency, and satisfaction than both baselines.
-          </figcaption>
-        </figure>
-      </section>
+    <section id="results" class="section">
+      <h2>Experimental Results</h2>
+      <p>
+        We conducted a user study with \(N=33\) participants from diverse drone-flying backgrounds in a high-fidelity
+        FPV drone racing simulator. Each participant was randomly assigned to one of three AI coaches:
+        <span class="method-badge method-l2c">L2C</span> and two baselines,
+        <span class="method-badge method-rbf">RBF</span> (rule-based fading) and <span
+          class="method-badge method-mia">MIA</span> (minimally-invasive assistance). We
+        measure human skill change with two metrics: lap time and failure count.
+      </p>
+      <p>
+        For <span class="method-badge method-l2c">L2C</span>, a paired-samples t-test comparing pre- and
+        post-coaching lap times yielded a mean reduction of \(27.9\%\) with \(p=0.005\) and Cohen's \(d_z=-1.08\).
+        Similarly, a paired t-test on per-lap failure count yielded a mean reduction of 3.52 failures per lap with
+        \(p \lt 0.001\) and Cohen's \(d_z=-2.13\).
+      </p>
+      <p>
+        For <span class="method-badge method-rbf">RBF</span>, paired tests showed no reliable change in lap time, but
+        the paired test on failure count showed significance. For <span class="method-badge method-mia">MIA</span>,
+        paired tests showed no reliable change in lap time or failure count. All four between-method contrasts favor
+        <span class="method-badge method-l2c">L2C</span> with medium-to-large effect sizes.
+      </p>
+      <figure>
+        <img src="assets/results.png" alt="Experimental results comparing L2C, RBF, and MIA" />
+        <figcaption>
+          After coaching, learners trained with L2C show significant reductions in lap time and failure count and
+          report higher safety, performance, agency, and satisfaction than both baselines.
+        </figcaption>
+      </figure>
+    </section>
 
-      <section id="trajectories" class="section">
-        <h2>Pre- and Post-Coaching Trajectories</h2>
-        <p>
-          The objective metrics show that L2C achieves larger reductions in lap time and failure count than both
-          baselines. This figure provides qualitative examples of how human trajectories change after coaching,
-          complementing aggregate metrics by showing the spatial structure of the laps.
-        </p>
-        <figure>
-          <img src="assets/trajectories.png" alt="Pre and post coaching trajectory examples" />
-          <figcaption>
-            Example pre- and post-coaching evaluation trajectories for the three coaching methods. Rows correspond to
-            coaching methods; columns compare pre- and post-coaching evaluation laps.
-          </figcaption>
-        </figure>
-      </section>
+    <section id="trajectories" class="section">
+      <h2>Pre- and Post-Coaching Trajectories</h2>
+      <p>
+        The objective metrics show that L2C achieves larger reductions in lap time and failure count than both
+        baselines. This figure provides qualitative examples of how human trajectories change after coaching.
+        <!-- , complementing aggregate metrics by showing the spatial structure of the laps. -->
+      </p>
+      <figure>
+        <img src="assets/trajectories.png" alt="Pre and post coaching trajectory examples" />
+        <figcaption>
+          Example pre- and post-coaching evaluation trajectories for the three coaching methods. Rows correspond to
+          coaching methods; columns compare pre- and post-coaching evaluation laps.
+        </figcaption>
+      </figure>
+    </section>
 
-      <section id="adaptation" class="section">
-        <h2>Assistance Adaptation</h2>
-        <p>
-          We inspect how L2C changes assistance based on the estimated learner skill and physical context. The magnitude
-          of the blending vector along example trajectories shows two emerging forms of adaptation: across learners, a
-          novice receives more assistance than a more skilled learner; within each trajectory, \(|\lambda|\) varies
-          sharply around the gates, the task-critical states that determine whether the learner collides or passes
-          successfully.
-        </p>
-        <figure>
-          <img src="assets/lambda.png" alt="L2C assistance coefficient visualization" />
-          <figcaption>
-            L2C assistance coefficient \(|\lambda|\) visualized on example racing trajectories. Left: estimated skill
-            \(\hat{\theta}=0\); right: estimated skill \(\hat{\theta}=0.5\).
-          </figcaption>
-        </figure>
-      </section>
+    <section id="adaptation" class="section">
+      <h2>Assistance Adaptation</h2>
+      <p>
+        We inspect how L2C changes assistance based on the estimated learner skill and physical context. The magnitude
+        of the blending vector along example trajectories shows two emerging forms of adaptation: across learners, a
+        novice receives more assistance than a more skilled learner; within each trajectory, \(|\lambda|\) varies
+        sharply near the gates, the <span class="coach-highlight">task-critical</span> states that determine whether
+        the learner collides or passes successfully. As the human upskills, the coach gradually steps back, allowing the
+        learner to take more control and experience productive failures.
+      </p>
+      <figure>
+        <img src="assets/lambda.png" alt="L2C assistance coefficient visualization" />
+        <figcaption>
+          L2C assistance coefficient \(|\lambda|\) visualized on example racing trajectories. Left: estimated skill
+          \(\hat{\theta}=0\); right: estimated skill \(\hat{\theta}=0.5\).
+        </figcaption>
+      </figure>
+    </section>
 
-      <section id="simulation" class="section">
-        <h2>Simulation Environment</h2>
-        <p>
-          We structure each trial into three phases: a pre- and post-coaching test, and a main coached training session.
-          To prevent participant fatigue, we limit the training session to 15 laps and restrict the human's control
-          authority to yaw and roll rate while automating the pitch rate and thrust.
-        </p>
-        <p>
-          The simulated racing environment consists of 12 gates in a figure-eight layout, with two gates spatially
-          overlapping at the central crossing. Participants are instructed to fly through the gates in the prescribed
-          order, completing the course as quickly as possible.
-        </p>
-        <figure>
-          <img src="assets/simulation-overview.png" alt="Drone racing simulation assets and track layout" />
-          <figcaption>
-            Drone-racing simulation assets: quadrotor model visualization, true-scale gate-quadrotor comparison, and
-            top-down track map showing gate order, positions, headings, and traversal direction.
-          </figcaption>
-        </figure>
-      </section>
+    <section id="simulation" class="section">
+      <h2>Simulation Environment</h2>
+      <p>
+        We built an immersive first-person-view (FPV) and physically realistic drone-racing simulation environment in
+        Isaac Lab.
+        The environment consists of 12 gates in a figure-eight layout. Participants are instructed to fly through the
+        gates in the prescribed order and complete the course as quickly as possible.
+      </p>
+      <p>
+        We structure each trial into three phases: a pre- and post-coaching test, and a main coached training session.
+        To prevent participant fatigue, we limit the training session to 15 laps and restrict the human's control
+        authority to yaw and roll rate while automating the pitch rate and thrust.
+      </p>
 
-      <section id="training" class="section">
-        <h2>Policy Training</h2>
-        <p>
-          We train both a base racing policy and an L2C coaching policy with PPO. The base policy is trained for racing
-          performance, while the coaching policy is trained with a skill-improvement objective so that it optimizes
-          long-term independent competence rather than only immediate assisted task completion.
-        </p>
-        <p>
-          The reward curves report the base racing policy and coach policy training runs used to produce the deployed
-          policies. The auxiliary reward terms encourage a stable gate-facing flight style, making the resulting
-          trajectories more suitable for human learners to imitate.
-        </p>
-        <figure>
-          <img src="assets/reward-curves.png" alt="Training reward curves" />
-          <figcaption>
-            Reward curves for the base racing policy and the learned L2C coaching policy.
-          </figcaption>
-        </figure>
-      </section>
+      <figure>
+        <img src="assets/simulation-overview.png" alt="Drone racing simulation assets and track layout" />
+        <figcaption>
+          Drone-racing simulation assets: quadrotor model visualization, true-scale gate-quadrotor comparison, and
+          top-down track map showing gate order, positions, headings, and traversal direction.
+        </figcaption>
+      </figure>
+    </section>
 
-      <section id="citation" class="section citation">
-        <div class="section-heading-row">
-          <h2>BibTeX</h2>
-          <button class="copy-bib-button" type="button" data-copy-target="bibtex-code">Copy BibTeX</button>
-        </div>
-        <p class="citation-note">
-          TODO: BibTeX will be added after the paper metadata is finalized.
-        </p>
-        <pre><code id="bibtex-code">@article{TODO,
-  title   = {TODO},
-  author  = {TODO},
-  year    = {TODO}
+    <section id="training" class="section">
+      <h2>Policy Training</h2>
+      <p>
+        We train both a expert racing policy and an L2C coaching policy with PPO.
+        The coaching policy is trained with a skill-improvement objective, one that is provably
+        aligned with the VoI, so that it optimizes the learner's
+        long-term independent competence instead of assisted task performance.
+      </p>
+      <p>
+        The reward curves report the expert policy and coaching policy training runs. The auxiliary reward terms
+        encourage a stable gate-facing flight style, making the resulting
+        trajectories easier for human learners to interpret and imitate.
+      </p>
+      <figure>
+        <img src="assets/reward-curves.png" alt="Training reward curves" />
+        <figcaption>
+          Reward curves for the expert policy and the learned L2C coaching policy.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="citation" class="section citation">
+      <div class="section-heading-row">
+        <h2>Citation</h2>
+        <button class="copy-bib-button" type="button" data-copy-target="bibtex-code">Copy BibTeX</button>
+      </div>
+      <!-- <p class="citation-note"> -->
+      <!-- TODO: BibTeX will be added after the paper metadata is finalized. -->
+      <!-- </p> -->
+      <pre><code id="bibtex-code">@article{wang2026aicoaching,
+  title   = {AI Coaching for Accelerating Human Skill Development with Reinforcement Learning},
+  author  = {Wang, Wei and Gu, Enlin and Loquercio, Antonio and Hu, Haimin and Mangharam, Rahul},
+  journal = {arXiv preprint (to appear)},
+  year    = {2026}
 }</code></pre>
-      </section>
-    </main>
-    <script src="toc.js?v=20260605-buttons"></script>
-  </body>
+    </section>
+  </main>
+  <script src="toc.js?v=20260605-buttons"></script>
+</body>
+
 </html>
