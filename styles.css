@@ -285,7 +285,7 @@ h1 {
   background: transparent;
   color: var(--ink);
   font-family: var(--font-heading);
-  font-size: clamp(29px, 4.1vw, 54px);
+  font-size: clamp(23px, 3.3vw, 43px);
   font-weight: 500;
   line-height: 1.13;
   letter-spacing: -0.025em;
