@@ -345,6 +345,31 @@ h1 {
   line-height: 1.35;
 }
 
+.paper-link-row {
+  margin: 14px auto 0;
+  color: var(--muted);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.paper-link-row a {
+  color: var(--penn-blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(1, 31, 91, 0.36);
+  text-underline-offset: 4px;
+  transition:
+    color 150ms ease,
+    text-decoration-color 150ms ease;
+}
+
+.paper-link-row a:hover,
+.paper-link-row a:focus-visible {
+  color: var(--penn-red);
+  text-decoration-color: var(--penn-red);
+}
+
 .lead {
   max-width: 860px;
   margin: 30px auto 0;
