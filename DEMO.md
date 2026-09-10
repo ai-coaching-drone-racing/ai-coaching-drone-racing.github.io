@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `c3c6c10c` (2026-09-10 UTC).
+Current source revision: `bbad1b3a` (2026-09-10 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -52,6 +52,14 @@ into one mesh. Settings > **Trackside details**, or `?event=off`, hides them
 without resetting the flight. Original warehouse mode also hides the group.
 Software-rendered checks still show a rendering cost, so constrained devices
 can use this switch; hardware frame rates are not established by these tests.
+
+Two side-wall strips now show Penn, xLab, Alliance, Johns Hopkins and JIRL
+in a competition-style layout. Four small trackside banners and red/blue/white
+pennants complement the spectator areas. These are visual project graphics,
+not claims of official sponsorship. The supplied PNGs and xLab's website logo
+are preserved in `demo/venue/brands/`, with source hashes and ownership notes.
+Small canvas print textures preserve image proportions and original colors.
+All branding is renderer-only and hidden in Original warehouse mode.
 
 Simulation pacing is unchanged: 50 Hz control, 250 Hz physics, elapsed-wall-time
 scheduling with a 100 ms frame-gap cap. Regression checks ensure it does not run
@@ -124,6 +132,10 @@ a physical controller.
 - Trackside people: Quaternius, CC0-1.0; source URLs, hashes and conversion
   details are in `demo/venue/event/`. They are simplified static characters,
   not scanned or photorealistic humans.
+- Additional logos: Johns Hopkins, Alliance and JIRL images supplied by the
+  project owner; xLab image from its official site. Original ownership applies;
+  `demo/venue/brands/README.md` records sources. No new license or endorsement
+  is implied.
 - Adapted belief filter: ETH Zurich and NVIDIA, BSD-3-Clause;
   `demo/licenses/hci-belief.txt`.
 - Penn wall logo: University of Pennsylvania; official brand guidelines apply.
