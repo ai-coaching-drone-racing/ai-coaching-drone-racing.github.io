@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#011f5b"/><meta name="darkreader-lock"/><title>AI Coaching | Driving Lab</title><link rel="icon" href="data:,"/>  <script type="module" crossorigin src="/car/assets/index-DHDLg75a.js"></script>
+  <link rel="stylesheet" crossorigin href="/car/assets/index-thHrvLhM.css">
+</head>
+<body>
+  <canvas id="world" aria-label="Three-dimensional RoboRacer driving circuit"></canvas>
+  <header>
+    <div class="brand"><div class="mark">AI</div><div><h1>AI Coaching</h1><span>Driving Lab</span></div></div>
+    <div class="session"><span id="mode-label">Manual driving</span><span class="prototype">Simulation prototype</span></div>
+    <button id="controls" class="help" title="Controls (H)"><i data-lucide="gamepad-2"></i><span>Controls</span></button>
+  </header>
+  <aside class="telemetry" aria-label="Driving telemetry">
+    <div class="speed"><strong id="speed">0.0</strong><span>km/h</span></div>
+    <dl><div><dt>LAP</dt><dd id="laps">0</dd></div><div><dt>TIME</dt><dd id="timer">0:00.0</dd></div><div><dt>BEST</dt><dd id="best">--</dd></div><div><dt>CONTACTS</dt><dd id="hits">0</dd></div></dl>
+  </aside>
+  <div id="paused" class="pause-state"><i data-lucide="pause"></i><span>Paused</span></div>
+  <div id="loading" role="status">Loading circuit...</div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div class="touch-controls" aria-label="Touch driving controls">
+    <div class="touch-steering"><i data-lucide="move-horizontal"></i><input id="touch-steer" type="range" min="-1" max="1" value="0" step=".01" aria-label="Steering"/></div>
+    <button data-pedal="brake" title="Brake or reverse"><i data-lucide="octagon-pause"></i></button>
+    <button data-pedal="throttle" title="Accelerate"><i data-lucide="chevrons-up"></i></button>
+  </div>
+  <footer class="toolbar">
+    <div class="segmented" role="group" aria-label="Driving mode"><button data-mode="manual" aria-pressed="true">Drive</button><button data-mode="demo" aria-pressed="false">Demo lap</button></div>
+    <div class="separator"></div>
+    <div class="segmented cameras" role="group" aria-label="Camera"><button data-view="chase" aria-pressed="true">Chase</button><button data-view="onboard" aria-pressed="false">Onboard</button><button data-view="circuit" aria-pressed="false">Circuit</button></div>
+    <div class="separator"></div>
+    <button id="pause" class="icon" title="Resume (Space)" aria-label="Resume"><i data-lucide="play"></i></button>
+    <button id="recover" class="icon" title="Return to track (R)" aria-label="Return to track"><i data-lucide="rotate-ccw"></i></button>
+    <button id="settings" class="icon" title="Settings" aria-label="Settings"><i data-lucide="sliders-horizontal"></i></button>
+    <button id="export" class="icon" title="Download session" aria-label="Download session"><i data-lucide="download"></i></button>
+    <button id="fullscreen" class="icon" title="Fullscreen" aria-label="Fullscreen"><i data-lucide="maximize"></i></button>
+  </footer>
+  <dialog id="controls-dialog">
+    <div class="dialog-head"><h2>Driving Controls</h2><button data-close class="icon" aria-label="Close controls" title="Close"><i data-lucide="x"></i></button></div>
+    <div class="control-grid"><section><h3>Keyboard</h3><div class="key-row"><kbd data-key="KeyW">W</kbd><span>Accelerate</span></div><div class="key-row"><kbd data-key="KeyS">S</kbd><span>Brake / reverse</span></div><div class="key-row"><kbd data-key="KeyA">A</kbd><kbd data-key="KeyD">D</kbd><span>Steer</span></div></section>
+    <section><h3>Gamepad</h3><div class="key-row"><kbd>L</kbd><span>Steer</span></div><div class="key-row"><kbd>RT</kbd><span>Accelerate</span></div><div class="key-row"><kbd>LT</kbd><span>Brake / reverse</span></div></section></div>
+    <div class="input-test"><span id="device">Keyboard</span><div><label>Steering <meter id="steer-meter" min="-1" max="1" value="0"></meter></label><label>Throttle <meter id="throttle-meter" min="0" max="1" value="0"></meter></label><label>Brake <meter id="brake-meter" min="0" max="1" value="0"></meter></label></div></div>
+    <div class="shortcuts"><span><kbd>Space</kbd> Pause</span><span><kbd>R</kbd> Recover</span><span><kbd>C</kbd> Camera</span></div>
+    <button id="start" class="primary"><i data-lucide="play"></i>Start driving</button>
+  </dialog>
+  <dialog id="settings-dialog">
+    <div class="dialog-head"><h2>Session Settings</h2><button data-close class="icon" aria-label="Close settings" title="Close"><i data-lucide="x"></i></button></div>
+    <label class="setting">Speed limit <output id="limit-label">2.0 m/s</output><input id="speed-limit" type="range" min=".8" max="3" step=".1" value="2"/></label>
+    <label class="check"><input id="reference-line" type="checkbox"/>Reference line</label>
+    <button id="reset-session"><i data-lucide="rotate-ccw"></i>New session</button>
+    <a class="about" href="./ABOUT.md" target="_blank" rel="noopener">Platform, sources & limitations</a>
+  </dialog>
+</body></html>
