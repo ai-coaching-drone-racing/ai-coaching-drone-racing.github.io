@@ -20,17 +20,25 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `a537e2c6` (2026-09-10 UTC).
+Current source revision: `a4a983b9` (2026-09-10 UTC).
 
-The simulator uses bright yellow for primary controls and the target gate,
-warm red for other gates, and neutral charcoal panels. The paper homepage's
-existing styling is unchanged.
+The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
+`#990000` for primary commands and the target gate, blue for other gates,
+and white gate printing. Wall accents use muted blue; other panels remain
+neutral charcoal. The paper homepage's existing styling is unchanged.
+The demo declares a Dark Reader lock to preserve its own dark interface and
+avoid automatic recoloring that reduced button-label contrast.
 
 The default warehouse is **Daylight Workshop**: matte, fine-grained flooring,
 painted walls, low-contrast ceiling seams and soft lighting without environment
 reflections. Gate printing is limited to a small AI Coaching mark, number, and
 diagonal bands. Only the end walls have a wordmark. The track geometry, gate
 openings, collisions, physics binary and policy weights are unchanged.
+
+Simulation pacing is unchanged: 50 Hz control, 250 Hz physics, elapsed-wall-time
+scheduling with a 100 ms frame-gap cap. Regression checks ensure it does not run
+faster than wall time; the software-rendered test is not a hardware frame-rate
+benchmark or a matched comparison with the old Isaac session.
 
 Settings > Venue style switches between Daylight Workshop, Graphite Hangar,
 Soft Sage Workshop, and the original warehouse without resetting the flight.
