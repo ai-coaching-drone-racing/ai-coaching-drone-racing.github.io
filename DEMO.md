@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `752f97b5` (2026-09-10 UTC).
+Current source revision: `a6b9be79` (2026-09-10 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -60,12 +60,23 @@ panel with live keyboard, stick and button feedback. Its only action is Close
 deadzone remain in Settings; flight starts from the main toolbar. Keyboard and
 gamepad inputs coexist per axis. Action notifications show assigned shortcuts.
 
-The initial camera is **Chase**. The toolbar separates a persistent **Current
-mode** label from its action button: **Fly with AI** starts a new assisted
-flight; **Use autopilot** returns control to the expert without changing the
-pause state. Current mode remains visible on phones, while paused, and after
-changes in Settings or a controller disconnection. Camera buttons indicate
-the selected view; the flight action button is not a selected-state toggle.
+The initial camera is **Chase**, with the expert on autopilot. A **Coaching
+method** selector below Tutorial offers **L2C / AI Coaching**, **MIA / Minimal
+intervention**, and **RBF / Rule-based fading**. Changing the selection pauses
+the flight and ends any active trial. **Start flying** begins a fresh trial of
+the selected method with independent scores and skill beliefs. **Use
+autopilot** ends that trial and returns control to the expert without changing
+the pause state. A separate persistent **Current mode** label always shows
+what is active, including on phones. Camera buttons indicate the selected
+view; the flight action button is not a selected-state toggle.
+
+MIA uses the original human-conditioned tracking actor. RBF uses the original
+expert with the HCI rule-based fading equations. L2C uses the original Coach
+with per-gate Bayesian skill inference. All three retain HCI's stage-1
+evaluation cadence, 30% evaluation blend and 95% recovery blend. Trial exports
+separate ended trials and include method, phase, blend, skill and posterior.
+Fixed-skill and fixed-assistance modes remain available as debug controls in
+Settings, separate from the three comparison methods.
 
 1. Build with `npm ci`, `npm test`, then `npm run build:pages` in the source
    directory. This uses the `/demo/` base and writes `dist-pages/`.
@@ -84,10 +95,15 @@ update the older separately hosted private Sites demo.
 ## Scope
 
 This is a portable flight/shared-control demonstration, not a reproduction
-of the full human study. The Coach mode uses a fixed skill input; adaptive
-skill estimation and the complete original coaching workflow are not present.
-The MuJoCo port is not claimed to be identical to Isaac Lab. Keyboard and
-virtual-gamepad tests are not a substitute for testing a real controller.
+of the full human study. RBF, belief inference and evaluation scheduling have
+numerical tests against the original Python definitions. Each method also
+completed four laps in scripted MuJoCo smoke tests; MIA still had three
+collisions. These are implementation checks, not human performance rankings.
+All three retain the existing MuJoCo one-gate-back collision recovery, not a
+claim of identical Isaac reset/contact behavior. Study stages 0/2, spoken
+instructions and participant management remain unported. The native Python
+demo is unchanged. Keyboard and virtual-gamepad tests do not replace testing
+a physical controller.
 
 ## Attribution
 
@@ -95,6 +111,8 @@ virtual-gamepad tests are not a substitute for testing a real controller.
 - Three.js contributors: MIT; `demo/licenses/three.txt`.
 - Lucide contributors: ISC; `demo/licenses/lucide.txt`.
 - fflate contributors: MIT; `demo/licenses/fflate.txt`.
+- Adapted belief filter: ETH Zurich and NVIDIA, BSD-3-Clause;
+  `demo/licenses/hci-belief.txt`.
 - Penn wall logo: University of Pennsylvania; official brand guidelines apply.
   Source and SHA256 are recorded in `demo/venue/README.md`. No new license or
   University endorsement is implied.
