@@ -5,6 +5,8 @@ Public URL: https://ai-coaching-drone-racing.github.io/demo/
 GitHub Pages serves this repository's `main` branch at the domain root.
 The paper homepage is `index.html`; the generated simulator is isolated in
 `demo/`. This website does not use the Personal project or Vercel.
+The paper homepage does not currently link to the unfinished demo. Its direct
+URL remains public for testing; this is not access control.
 
 The simulator runs the original exported HCI actors locally in JavaScript,
 MuJoCo 3.13.0 physics in WebAssembly, and Three.js rendering. It does not need
@@ -18,7 +20,11 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `7dc06742` (2026-09-10 UTC).
+Current source revision: `9edb4c53` (2026-09-10 UTC).
+
+The simulator uses bright yellow for primary controls and the target gate,
+warm red for other gates, and neutral charcoal panels. The paper homepage's
+existing styling is unchanged.
 
 The **Tutorial** button below the project title (H) opens a frozen keyboard and
 controller input monitor. Keys, sticks, buttons and flight channels update live;
