@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `41d598a0` (2026-09-10 UTC).
+Current source revision: `752f97b5` (2026-09-10 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -59,6 +59,13 @@ panel with live keyboard, stick and button feedback. Its only action is Close
 (also Esc), which keeps the flight paused. Mode, axis mapping, inversion and
 deadzone remain in Settings; flight starts from the main toolbar. Keyboard and
 gamepad inputs coexist per axis. Action notifications show assigned shortcuts.
+
+The initial camera is **Chase**. The toolbar separates a persistent **Current
+mode** label from its action button: **Fly with AI** starts a new assisted
+flight; **Use autopilot** returns control to the expert without changing the
+pause state. Current mode remains visible on phones, while paused, and after
+changes in Settings or a controller disconnection. Camera buttons indicate
+the selected view; the flight action button is not a selected-state toggle.
 
 1. Build with `npm ci`, `npm test`, then `npm run build:pages` in the source
    directory. This uses the `/demo/` base and writes `dist-pages/`.
