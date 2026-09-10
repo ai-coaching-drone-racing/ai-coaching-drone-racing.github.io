@@ -20,11 +20,23 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `9edb4c53` (2026-09-10 UTC).
+Current source revision: `6575c4f8` (2026-09-10 UTC).
 
 The simulator uses bright yellow for primary controls and the target gate,
 warm red for other gates, and neutral charcoal panels. The paper homepage's
 existing styling is unchanged.
+
+The default warehouse is **Daylight Workshop**: matte, fine-grained flooring,
+painted walls, low-contrast ceiling seams and soft lighting without environment
+reflections. Gate printing is limited to a small AI Coaching mark, number, and
+diagonal bands. Only the end walls have a wordmark. The track geometry, gate
+openings, collisions, physics binary and policy weights are unchanged.
+
+Settings > Venue style switches between Daylight Workshop, Graphite Hangar,
+Soft Sage Workshop, and the original warehouse without resetting the flight.
+Direct style URLs append `?venue=studio`, `?venue=arena`, `?venue=gallery`, or
+`?venue=original`. Comparison screenshots are in `demo/previews/`; the new
+generated material and its prompt are documented in `demo/venue/README.md`.
 
 The **Tutorial** button below the project title (H) opens a frozen keyboard and
 controller input monitor. Keys, sticks, buttons and flight channels update live;
@@ -37,7 +49,7 @@ inputs coexist per axis. Action notifications show shortcuts only when assigned.
 2. Copy only `dist-pages/` into this repository's `demo/`. The directory is
    generated; replace obsolete generated files there, not the paper's `assets/`.
 3. Serve this website locally and run the source repository's browser tests
-   (`tests/browser.mjs` and `tests/tutorial.mjs`) with `TEST_URL` set to the local
+   (`tests/browser.mjs`, `tests/tutorial.mjs`, and `tests/venue.mjs`) with `TEST_URL` set to the local
    `/demo/` URL.
 4. Review the diff, commit, and push `main`. Wait for Pages to finish building,
    then check the public URL, including the WASM and texture requests.
