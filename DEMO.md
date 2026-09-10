@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `a4a983b9` (2026-09-10 UTC).
+Current source revision: `8e86e3dc` (2026-09-10 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -32,7 +32,11 @@ avoid automatic recoloring that reduced button-label contrast.
 The default warehouse is **Daylight Workshop**: matte, fine-grained flooring,
 painted walls, low-contrast ceiling seams and soft lighting without environment
 reflections. Gate printing is limited to a small AI Coaching mark, number, and
-diagonal bands. Only the end walls have a wordmark. The track geometry, gate
+diagonal bands. Each gate now has two thin gray support poles (22 mm diameter)
+and small floor bases, rendered only with no collision geometry. Supports hide
+with their parent gate and in Original warehouse mode. One end wall has an
+official Penn shield-and-wordmark, the other AI Coaching. The unmodified Penn
+asset and attribution are in `demo/venue/`. The track geometry, gate
 openings, collisions, physics binary and policy weights are unchanged.
 
 Simulation pacing is unchanged: 50 Hz control, 250 Hz physics, elapsed-wall-time
@@ -80,6 +84,9 @@ virtual-gamepad tests are not a substitute for testing a real controller.
 - Three.js contributors: MIT; `demo/licenses/three.txt`.
 - Lucide contributors: ISC; `demo/licenses/lucide.txt`.
 - fflate contributors: MIT; `demo/licenses/fflate.txt`.
+- Penn wall logo: University of Pennsylvania; official brand guidelines apply.
+  Source and SHA256 are recorded in `demo/venue/README.md`. No new license or
+  University endorsement is implied.
 - Warehouse, drone, gates, and textures retain their original ownership and
   license terms. Conversion/source hashes and texture origins are recorded in
   `demo/sim/asset-provenance.json`. This page does not relicense those assets.
