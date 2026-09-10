@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `8e86e3dc` (2026-09-10 UTC).
+Current source revision: `41d598a0` (2026-09-10 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -30,8 +30,12 @@ The demo declares a Dark Reader lock to preserve its own dark interface and
 avoid automatic recoloring that reduced button-label contrast.
 
 The default warehouse is **Daylight Workshop**: matte, fine-grained flooring,
-painted walls, low-contrast ceiling seams and soft lighting without environment
-reflections. Gate printing is limited to a small AI Coaching mark, number, and
+light neutral-gray upper walls, muted blue lower walls, graphite trim, and
+neutral-gray ceiling and light fixtures. The existing color-band boundaries,
+floor texture and roughness are unchanged. Fill lighting has a neutral bounce
+color with slightly less ambient fill relative to the key light, reducing the
+former green/yellow cast without adding render passes or reflective finishes.
+Gate printing is limited to a small AI Coaching mark, number, and
 diagonal bands. Each gate now has two thin gray support poles (22 mm diameter)
 and small floor bases, rendered only with no collision geometry. Supports hide
 with their parent gate and in Original warehouse mode. One end wall has an
