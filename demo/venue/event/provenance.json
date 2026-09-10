@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "name": "casual",
+      "creator": "Quaternius",
+      "source": "https://poly.pizza/m/kZ3DmIoGip",
+      "license": "CC0-1.0",
+      "sha256": "fea7e71271203e7073f1a073fa1208de7402df276f87f80e149bf7589b5d46b4"
+    },
+    {
+      "name": "hoodie",
+      "creator": "Quaternius",
+      "source": "https://poly.pizza/m/gKLBoRsyKe",
+      "license": "CC0-1.0",
+      "sha256": "0de1bcd789d409214cf82f66f61daeb53d2f7de6d914b23e7b3660bfb3dee61e"
+    },
+    {
+      "name": "woman",
+      "creator": "Quaternius",
+      "source": "https://poly.pizza/m/nIItLV9nxS",
+      "license": "CC0-1.0",
+      "sha256": "a6522fe53d15de21130a957d1bf2b8a9a58d4e4e9a12af646645b667a9bb2d17"
+    }
+  ],
+  "conversion": "Static idle/neutral/wave poses, Z-up, nominal height 1.76 m. Each material region is welded and simplified offline with Three.js SimplifyModifier (48% vertex reduction for regions over 80 vertices). Clothing and skin palettes are vertex colors. No original animations or full GLBs included in the deployed runtime."
+}

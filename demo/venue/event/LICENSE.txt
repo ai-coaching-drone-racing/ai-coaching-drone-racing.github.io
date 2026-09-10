@@ -1,0 +1,14 @@
+Trackside spectator models: Quaternius
+License: CC0 1.0 Universal (Public Domain)
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Casual Character: https://poly.pizza/m/kZ3DmIoGip
+Hoodie Character: https://poly.pizza/m/gKLBoRsyKe
+Animated Woman: https://poly.pizza/m/nIItLV9nxS
+
+The creator's original packs are distributed under CC0:
+https://quaternius.com/packs/ultimatemodularcharacters.html
+
+Converted to static poses and recolored for this demo. See provenance.json
+for source hashes and conversion details. Cameras, barriers and equipment
+are original renderer-only geometry in src/event.js.

@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `a6b9be79` (2026-09-10 UTC).
+Current source revision: `c3c6c10c` (2026-09-10 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -42,6 +42,16 @@ with their parent gate and in Original warehouse mode. One end wall has an
 official Penn shield-and-wordmark, the other AI Coaching. The unmodified Penn
 asset and attribution are in `demo/venue/`. The track geometry, gate
 openings, collisions, physics binary and policy weights are unchanged.
+
+The trackside area has 24 adult-proportioned, low-poly spectators in small
+staggered groups, two tripod cameras, low rails and an equipment table. Most
+of the crowd stands behind the original west-side front row. Quaternius CC0
+characters are baked into static poses and simplified offline; the compressed
+geometry adds approximately 0.44 MB. All details are renderer-only and batched
+into one mesh. Settings > **Trackside details**, or `?event=off`, hides them
+without resetting the flight. Original warehouse mode also hides the group.
+Software-rendered checks still show a rendering cost, so constrained devices
+can use this switch; hardware frame rates are not established by these tests.
 
 Simulation pacing is unchanged: 50 Hz control, 250 Hz physics, elapsed-wall-time
 scheduling with a 100 ms frame-gap cap. Regression checks ensure it does not run
@@ -83,7 +93,7 @@ Settings, separate from the three comparison methods.
 2. Copy only `dist-pages/` into this repository's `demo/`. The directory is
    generated; replace obsolete generated files there, not the paper's `assets/`.
 3. Serve this website locally and run the source repository's browser tests
-   (`tests/browser.mjs`, `tests/tutorial.mjs`, and `tests/venue.mjs`) with `TEST_URL` set to the local
+   (`tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
    `/demo/` URL.
 4. Review the diff, commit, and push `main`. Wait for Pages to finish building,
    then check the public URL, including the WASM and texture requests.
@@ -111,6 +121,9 @@ a physical controller.
 - Three.js contributors: MIT; `demo/licenses/three.txt`.
 - Lucide contributors: ISC; `demo/licenses/lucide.txt`.
 - fflate contributors: MIT; `demo/licenses/fflate.txt`.
+- Trackside people: Quaternius, CC0-1.0; source URLs, hashes and conversion
+  details are in `demo/venue/event/`. They are simplified static characters,
+  not scanned or photorealistic humans.
 - Adapted belief filter: ETH Zurich and NVIDIA, BSD-3-Clause;
   `demo/licenses/hci-belief.txt`.
 - Penn wall logo: University of Pennsylvania; official brand guidelines apply.
