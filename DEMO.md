@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `f91a3273` (2026-09-11 UTC).
+Current source revision: `8ac15b58` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -84,16 +84,22 @@ shown until the browser exposes a controller. Some browsers require pressing
 a controller button with the page focused; polling cannot bypass that policy.
 
 The initial camera is **Chase**, with the expert on autopilot. The default
-**Demo** tab offers a fixed roll/yaw AI-blend slider (30-95%) and a short
-**Compare 3 levels** experience: 90%, 60%, then 30% assistance, 45 seconds of
-active wall time per round. Thrust and pitch stay AI-controlled. Rounds reset
-to the same start and pause between levels; operators can finish early.
+**Demo** tab offers **No Coach**, **MIA**, and **AI Coaching**. No Coach applies
+human roll/yaw directly, with zero steering assistance and no coaching speech;
+thrust and pitch stay expert-controlled. It is not four-axis manual flight.
+MIA and AI Coaching use the original HCI tracking and L2C policies, respectively,
+including evaluation and recovery scheduling, not fixed blend substitutes.
+Selecting a method pauses; Start flying begins a fresh trial.
+**Compare 3 modes** runs these methods in that order, 45 seconds of active wall
+time per round. Rounds reset to the same start and pause between methods;
+operators can finish early.
 The input/applied markers show the human and actual simulator commands. The
-summary reports active time, gates and resets, with a local JSON download.
+summary reports active time, gates and resets, with a local JSON download
+(`assistance-comparison/v2`, including method IDs, live blends and phases).
 Pauses, tutorial inspection and controller disconnects do not consume round
 time. Both wall time and simulated time are recorded because slow clients can
-advance less simulation within a round. This is a fixed-assistance demonstration
-of control feel, not an HCI-method comparison or evidence of learning.
+advance less simulation within a round. This compares control feel, not learning
+outcomes. The fixed order is for presentations, not a counterbalanced human study.
 
 The separate **HCI methods** tab (also selectable with `?experience=hci`) has
 a **Coaching method** selector offering **L2C / AI Coaching**, **MIA / Minimal
@@ -110,8 +116,8 @@ expert with the HCI rule-based fading equations. L2C uses the original Coach
 with per-gate Bayesian skill inference. All three retain HCI's stage-1
 evaluation cadence, 30% evaluation blend and 95% recovery blend. Trial exports
 separate ended trials and include method, phase, blend, skill and posterior.
-Fixed-skill and other debug modes remain available in Settings. The fixed-blend
-presentation experience is separate from these three actual HCI methods.
+Fixed-skill and fixed-blend debug modes remain available in Settings. RBF and the
+full study flow remain available separately from the three-option presentation.
 
 **Session**, next to Tutorial, sequences **Pre-test -> Coaching -> Post-test**
 with an optional participant ID and one locked method. Each stage is started
@@ -131,8 +137,9 @@ recovery/takeover, encouragement and direction cues are bundled
 under `demo/audio/`, together with provenance notes. The browser decodes all
 29 original samples and pauses playback with the simulation. The executable
 HCI source enables direction cues in test stages too, so tests remain
-voice-assisted. The fixed Demo plays the original directional corrections and
-encouragement. The old welcome recording and all of its start hooks are removed
+voice-assisted. MIA and AI Coaching in Demo play the original directional
+corrections and encouragement; No Coach retains only rotor sound and music.
+The old welcome recording and all of its start hooks are removed
 because it tells users to press a square button to start, which is not the
 browser flow. The native recording remains unchanged. Comparison exports
 record audio settings and cue events. Rotor sound is synthesized locally,
