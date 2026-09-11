@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `c7fc8d49` (2026-09-11 UTC).
+Current source revision: `8a06a58d` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -126,13 +126,15 @@ events and summaries for each stage. Records are held in memory until download;
 there is no server upload. Unsaved records trigger a leave-page warning.
 
 Audio now defaults on after the first click/key gesture. The sound button
-(also visible on phones) remembers mute state. Original HCI welcome,
-evaluation, recovery/takeover, encouragement and direction cues are bundled
+(also visible on phones) remembers mute state. Original HCI evaluation,
+recovery/takeover, encouragement and direction cues are bundled
 under `demo/audio/`, together with provenance notes. The browser decodes all
-30 original samples and pauses playback with the simulation. The executable
+29 original samples and pauses playback with the simulation. The executable
 HCI source enables direction cues in test stages too, so tests remain
-voice-assisted. The fixed Demo now also plays welcome at each start, followed
-by the original directional corrections and encouragement. Comparison exports
+voice-assisted. The fixed Demo plays the original directional corrections and
+encouragement. The old welcome recording and all of its start hooks are removed
+because it tells users to press a square button to start, which is not the
+browser flow. The native recording remains unchanged. Comparison exports
 record audio settings and cue events. Rotor sound is synthesized locally,
 softened under speech.
 
