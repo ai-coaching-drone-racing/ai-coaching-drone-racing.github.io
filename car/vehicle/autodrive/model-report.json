@@ -1,0 +1,41 @@
+{
+  "sourceCommit": "bb0c5018b48b888faea405a0b0342729b5841dc9",
+  "sourcePath": "Assets/Models/Vehicle/F1TENTH/F1TENTH.fbx",
+  "geometryProfile": "xlab-roboracer-offroad-1-10",
+  "sourceTriangles": 937506,
+  "outputTriangles": 231988,
+  "drawMeshes": 72,
+  "bytes": 8599548,
+  "glbSha256": "ddb37db29813bb54fa4a7f09dbfcf7a226e4bd29e7d13cbd88b3dd7f55b21e5f",
+  "sourceWheelCenters": {
+    "fr": [
+      88.41957229651031,
+      60.66206691958575,
+      79.85120121658919
+    ],
+    "rr": [
+      -242.19856441204487,
+      50.419850266646634,
+      83.17052916538488
+    ],
+    "fl": [
+      86.90555250098878,
+      60.65693281249225,
+      -156.2334888110015
+    ],
+    "rl": [
+      -242.19974232428274,
+      50.41902974394534,
+      -159.66868515947982
+    ]
+  },
+  "wheelGroups": [
+    "fl",
+    "fr",
+    "rl",
+    "rr"
+  ],
+  "physicsEngine": "MuJoCo",
+  "nativeAutoDrivePhysics": false,
+  "note": "Visual CAD conversion; wheels resized to hardware dimensions. Chassis height/details are source CAD, not a calibrated hardware replica."
+}

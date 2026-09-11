@@ -6,8 +6,10 @@ A browser-only **3D driving practice prototype**, based on the size and interfac
 
 - A free 6-DOF chassis, four rotating tires, spring/damper suspension, two front steering joints, rear wheel motors, ground friction, and solid course barriers.
 - Ackermann steering derived from a 0.324 m wheelbase and 0.255 m wheel tread; 0.055 m wheel radius. These dimensions come from xLab's vehicle description.
+- The active car uses AutoDRIVE's F1TENTH CAD, converted to a compact GLB with four independently moving wheels. This imports the visual model, **not Unity/PhysX or the AutoDRIVE controller**. Provenance, modifications and BSD-2-Clause license are under `vehicle/autodrive/`.
 - Manual keyboard, touch, and standard-mapped browser gamepad controls. Unknown gamepad mappings are not activated.
 - Chase, onboard RGB-style perspective, and circuit cameras. The onboard view is a synthetic monocular rendering, **not a calibrated ZED stereo/depth sensor**.
+- Camera placement uses the published ZED X Mini body mount, converted from the rear-axle-ground `base_link` frame to the simulator root. The extra camera housing is illustrative. CAD electronics/sensor details are not a measured replica of xLab's current car; camera intrinsics remain uncalibrated.
 - Authored practice circuit with straights and connected corners in a 3D room. This flat-ground practice layout is not an imported map of the lab.
 - A pure-pursuit demo driver. It reads perfect simulator state; it is **not** a vision policy, transferred expert, or adaptive AI coach.
 - Session JSON export with 10 Hz state/control samples (up to 36,000), mode changes, contact episodes, recoveries and laps. Manual/demo best times are separate; a recovery or mid-lap mode change invalidates the partial lap.
@@ -48,4 +50,4 @@ Physical gamepad hardware and real camera feeds have not been verified on this m
 
 ## Dependencies
 
-MuJoCo 3.13.0 (Apache-2.0), Three.js 0.183.2 (MIT), Lucide 0.577.0 (ISC). Copies of their licenses are included in `licenses/`. The `vehicle/` folder includes the original mesh's Apache-2.0 license. Venue logos are provided by the project owner.
+MuJoCo 3.13.0 (Apache-2.0), Three.js 0.183.2 (MIT), Lucide 0.577.0 (ISC). Copies of their licenses are included in `licenses/`. The `vehicle/` folder includes the xLab pit mesh's Apache-2.0 license and the AutoDRIVE visual model's BSD-2-Clause license. Penn logo provenance is in `venue/README.md`; other venue logos were provided by the project owner.
