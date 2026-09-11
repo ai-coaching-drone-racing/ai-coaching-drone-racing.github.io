@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `8ac15b58` (2026-09-11 UTC).
+Current source revision: `f7811794` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -118,6 +118,11 @@ evaluation cadence, 30% evaluation blend and 95% recovery blend. Trial exports
 separate ended trials and include method, phase, blend, skill and posterior.
 Fixed-skill and fixed-blend debug modes remain available in Settings. RBF and the
 full study flow remain available separately from the three-option presentation.
+**Settings > Control mode > Fixed assistance** now allows 0-100% steering blend.
+At 0%, roll/yaw follow human input directly, including after resets; thrust/pitch
+and optional spoken guidance remain automatic. No Coach also removes guidance.
+The slider updates the live blend immediately while paused without moving the drone.
+This does not change the original HCI/session blend limits.
 
 **Session**, next to Tutorial, sequences **Pre-test -> Coaching -> Post-test**
 with an optional participant ID and one locked method. Each stage is started
