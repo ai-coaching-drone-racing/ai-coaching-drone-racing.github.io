@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `8a06a58d` (2026-09-11 UTC).
+Current source revision: `f91a3273` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -145,6 +145,8 @@ They stream one at a time in shuffled order after a user gesture, pause with
 the simulation, and automatically become quieter during voice cues. Settings >
 Background music is a separate persistent toggle; the toolbar sound button
 mutes everything. Titles, hashes and attribution are in `demo/audio/music/`.
+Normal music gain is 0.24, ducked to 0.035 during speech with a fast reduction
+and smooth return. Voice volume is unchanged.
 
 Startup now reports six real loading stages with downloaded MB and visual-asset
 counts. This is stage progress, not an overall byte percentage. Flight controls

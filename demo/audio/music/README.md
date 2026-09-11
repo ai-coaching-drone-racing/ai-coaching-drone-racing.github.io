@@ -19,3 +19,5 @@ The browser streams one randomly ordered track at a time after a user gesture.
 It does not preload/decode the full playlist during scene loading. Music pauses
 with the simulation and ducks during speech. Web mixing levels are configured
 for the presentation, not claimed to match the native system volume setting.
+Normal music gain is 0.24; speech reduces it to 0.035. The gain ramps down with
+a 0.05-second time constant and returns smoothly with a 0.3-second time constant.
