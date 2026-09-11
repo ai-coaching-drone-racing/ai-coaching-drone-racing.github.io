@@ -4,13 +4,14 @@ Live path: https://ai-coaching-drone-racing.github.io/car/
 
 This is a standalone static MuJoCo WASM / Three.js 3D driving prototype. It does not replace the drone demo and is not linked from the paper homepage yet.
 
-Source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`, commit `48de1c31`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`.
+Source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`, commit `8eff6ee5`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`.
 
 Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions documented by xLab's Autoware vehicle package. xLab's architecture documentation explicitly includes a ZED X Mini camera and real motor/servo interfaces. This establishes a plausible future hardware route, not an inventory confirmation or sim-to-real validation.
 
 - Wheel-based full 3D MuJoCo physics, spring suspension, front Ackermann steering, rear drive motors and collision barriers.
 - Keyboard, standard browser gamepad and touch input; Chase, Onboard and Circuit views.
 - Visible Controls panel, pause, recovery, speed limit and session JSON export.
+- Controls automatically scans for late-connected/reconnected gamepads every 100 ms, independently of rendering. Opening or returning focus scans immediately; closing or hiding the page stops the extra timer. Browser activation may still require a controller button press. PlayStation R2/L2 labels accompany RT/LT; controller mappings are unchanged.
 - `Demo lap` is a pure-pursuit reference driver, not a learned or adaptive coach.
 - Authored practice track and room; not the original Isaac environment or a lab scan.
 - The active vehicle uses AutoDRIVE F1TENTH CAD (BSD-2-Clause), adapted to xLab's published wheel geometry with independent moving wheels. The added camera housing and body mounting view are illustrative, not optically calibrated. Dynamics and simplified collision shapes remain the MuJoCo approximation, **not AutoDRIVE Unity/PhysX**. No Unity build or login is needed.

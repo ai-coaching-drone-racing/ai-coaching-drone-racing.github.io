@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `bbad1b3a` (2026-09-10 UTC).
+Current source revision: `8eff6ee5` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -77,6 +77,11 @@ panel with live keyboard, stick and button feedback. Its only action is Close
 (also Esc), which keeps the flight paused. Mode, axis mapping, inversion and
 deadzone remain in Settings; flight starts from the main toolbar. Keyboard and
 gamepad inputs coexist per axis. Action notifications show assigned shortcuts.
+While Tutorial is open, a separate 100 ms timer scans controllers even if the
+3D loop is idle. Opening, reconnecting and returning focus trigger an immediate
+scan; closing or hiding the page stops the timer. A short activation hint is
+shown until the browser exposes a controller. Some browsers require pressing
+a controller button with the page focused; polling cannot bypass that policy.
 
 The initial camera is **Chase**, with the expert on autopilot. A **Coaching
 method** selector below Tutorial offers **L2C / AI Coaching**, **MIA / Minimal
