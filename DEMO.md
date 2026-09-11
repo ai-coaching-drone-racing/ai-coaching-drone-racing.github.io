@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `8eff6ee5` (2026-09-11 UTC).
+Current source revision: `076b94cf` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -101,6 +101,27 @@ separate ended trials and include method, phase, blend, skill and posterior.
 Fixed-skill and fixed-assistance modes remain available as debug controls in
 Settings, separate from the three comparison methods.
 
+**Session**, next to Tutorial, sequences **Pre-test -> Coaching -> Post-test**
+with an optional participant ID and one locked method. Each stage is started
+and finished explicitly; there is no invented duration or lap-count cutoff.
+Stage 0/2 use continuous evaluation with 30% roll/yaw AI blend; thrust/pitch
+stay AI-controlled. Stage 1 uses the existing adaptive/scheduled behavior.
+These tests are not fully unassisted. Stages start with fresh beliefs, matching
+separate native launches. Session pauses on controller disconnection, keeps
+manual resets in the record, and shows time, laps, failures and best lap.
+Download session produces a local ZIP with metadata, 50 Hz action/pose rows,
+events and summaries for each stage. Records are held in memory until download;
+there is no server upload. Unsaved records trigger a leave-page warning.
+
+Audio now defaults on after the first click/key gesture. The sound button
+(also visible on phones) remembers mute state. Original HCI welcome,
+evaluation, recovery/takeover, encouragement and direction cues are bundled
+under `demo/audio/`, together with provenance notes. The browser decodes all
+30 original samples and pauses playback with the simulation. The executable
+HCI source enables direction cues in test stages too, so tests remain
+voice-assisted. The configured original BGM folder was absent; no replacement
+music is included. Rotor sound is synthesized locally, softened under speech.
+
 1. Build with `npm ci`, `npm test`, then `npm run build:pages` in the source
    directory. This uses the `/demo/` base and writes `dist-pages/`.
 2. Copy only `dist-pages/` into this repository's `demo/`. The directory is
@@ -123,10 +144,11 @@ numerical tests against the original Python definitions. Each method also
 completed four laps in scripted MuJoCo smoke tests; MIA still had three
 collisions. These are implementation checks, not human performance rankings.
 All three retain the existing MuJoCo one-gate-back collision recovery, not a
-claim of identical Isaac reset/contact behavior. Study stages 0/2, spoken
-instructions and participant management remain unported. The native Python
-demo is unchanged. Keyboard and virtual-gamepad tests do not replace testing
-a physical controller.
+claim of identical Isaac reset/contact behavior. The browser stage wrapper
+and audio have separate UI, source-scheduler, decoding and ZIP export tests;
+they do not validate the full human study or reproduce every Isaac HUD visual.
+The native Python demo is unchanged. Keyboard, virtual-gamepad and WebAudio
+tests do not replace testing a physical controller and speakers.
 
 ## Attribution
 
