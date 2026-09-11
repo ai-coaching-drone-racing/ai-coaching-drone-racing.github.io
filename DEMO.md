@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `0a6a2e00` (2026-09-11 UTC).
+Current source revision: `c7fc8d49` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -131,15 +131,30 @@ evaluation, recovery/takeover, encouragement and direction cues are bundled
 under `demo/audio/`, together with provenance notes. The browser decodes all
 30 original samples and pauses playback with the simulation. The executable
 HCI source enables direction cues in test stages too, so tests remain
-voice-assisted. The configured original BGM folder was absent; no replacement
-music is included. Rotor sound is synthesized locally, softened under speech.
+voice-assisted. The fixed Demo now also plays welcome at each start, followed
+by the original directional corrections and encouragement. Comparison exports
+record audio settings and cue events. Rotor sound is synthesized locally,
+softened under speech.
+
+The six original background tracks were recovered from the old machine's
+Git-ignored BGM directory and converted to complete MP3s, adding about 33 MB
+of hosted files. The project owner confirmed public-use/distribution permission.
+They stream one at a time in shuffled order after a user gesture, pause with
+the simulation, and automatically become quieter during voice cues. Settings >
+Background music is a separate persistent toggle; the toolbar sound button
+mutes everything. Titles, hashes and attribution are in `demo/audio/music/`.
+
+Startup now reports six real loading stages with downloaded MB and visual-asset
+counts. This is stage progress, not an overall byte percentage. Flight controls
+stay hidden and disabled until ready; failures show Retry. Music is not part
+of the initial scene download.
 
 1. Build with `npm ci`, `npm test`, then `npm run build:pages` in the source
    directory. This uses the `/demo/` base and writes `dist-pages/`.
 2. Copy only `dist-pages/` into this repository's `demo/`. The directory is
    generated; replace obsolete generated files there, not the paper's `assets/`.
 3. Serve this website locally and run the source repository's browser tests
-   (`tests/presentation-browser.mjs`, `tests/session-browser.mjs`, `tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
+   (`tests/startup-browser.mjs`, `tests/presentation-browser.mjs`, `tests/session-browser.mjs`, `tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
    `/demo/` URL.
 4. Review the diff, commit, and push `main`. Wait for Pages to finish building,
    then check the public URL, including the WASM and texture requests.
@@ -168,6 +183,10 @@ tests do not replace testing a physical controller and speakers.
 - Three.js contributors: MIT; `demo/licenses/three.txt`.
 - Lucide contributors: ISC; `demo/licenses/lucide.txt`.
 - fflate contributors: MIT; `demo/licenses/fflate.txt`.
+- Original HCI music: Gaijin Entertainment, Jimmie Asche and Nikita Mokrov,
+  as credited in the recovered filenames. Public website use/distribution was
+  authorized by the project owner; original rights remain with the holders.
+  See `demo/audio/music/README.md` and `manifest.json`.
 - Trackside people: Quaternius, CC0-1.0; source URLs, hashes and conversion
   details are in `demo/venue/event/`. They are simplified static characters,
   not scanned or photorealistic humans.

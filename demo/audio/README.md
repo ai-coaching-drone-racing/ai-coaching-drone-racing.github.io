@@ -15,6 +15,8 @@ Some original speech/UI wording says "no assistance"; the actual stage-0/2
 shared-control setting retains a 0.3 roll/yaw AI blend. The browser labels that
 numeric setting explicitly. Do not describe these tests as unaided mastery.
 
-The original configured BGM folder is absent in the checkout. No replacement
-music is bundled. Browser rotor sound is synthesized locally and is not part
-of the original voice recordings.
+The original BGM directory was excluded by `**/bgm/*` in Git. Its six WAVs
+were recovered from the original HCI checkout on the owner's `coaching` host
+on 2026-09-11. Browser MP3 copies, titles, source hashes and conversion details
+are under `music/`. These are the original tracks, not replacement music.
+Browser rotor sound is synthesized locally and is not part of those recordings.
