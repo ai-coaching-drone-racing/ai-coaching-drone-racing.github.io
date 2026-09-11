@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `076b94cf` (2026-09-11 UTC).
+Current source revision: `0a6a2e00` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -83,8 +83,20 @@ scan; closing or hiding the page stops the timer. A short activation hint is
 shown until the browser exposes a controller. Some browsers require pressing
 a controller button with the page focused; polling cannot bypass that policy.
 
-The initial camera is **Chase**, with the expert on autopilot. A **Coaching
-method** selector below Tutorial offers **L2C / AI Coaching**, **MIA / Minimal
+The initial camera is **Chase**, with the expert on autopilot. The default
+**Demo** tab offers a fixed roll/yaw AI-blend slider (30-95%) and a short
+**Compare 3 levels** experience: 90%, 60%, then 30% assistance, 45 seconds of
+active wall time per round. Thrust and pitch stay AI-controlled. Rounds reset
+to the same start and pause between levels; operators can finish early.
+The input/applied markers show the human and actual simulator commands. The
+summary reports active time, gates and resets, with a local JSON download.
+Pauses, tutorial inspection and controller disconnects do not consume round
+time. Both wall time and simulated time are recorded because slow clients can
+advance less simulation within a round. This is a fixed-assistance demonstration
+of control feel, not an HCI-method comparison or evidence of learning.
+
+The separate **HCI methods** tab (also selectable with `?experience=hci`) has
+a **Coaching method** selector offering **L2C / AI Coaching**, **MIA / Minimal
 intervention**, and **RBF / Rule-based fading**. Changing the selection pauses
 the flight and ends any active trial. **Start flying** begins a fresh trial of
 the selected method with independent scores and skill beliefs. **Use
@@ -98,8 +110,8 @@ expert with the HCI rule-based fading equations. L2C uses the original Coach
 with per-gate Bayesian skill inference. All three retain HCI's stage-1
 evaluation cadence, 30% evaluation blend and 95% recovery blend. Trial exports
 separate ended trials and include method, phase, blend, skill and posterior.
-Fixed-skill and fixed-assistance modes remain available as debug controls in
-Settings, separate from the three comparison methods.
+Fixed-skill and other debug modes remain available in Settings. The fixed-blend
+presentation experience is separate from these three actual HCI methods.
 
 **Session**, next to Tutorial, sequences **Pre-test -> Coaching -> Post-test**
 with an optional participant ID and one locked method. Each stage is started
@@ -127,7 +139,7 @@ music is included. Rotor sound is synthesized locally, softened under speech.
 2. Copy only `dist-pages/` into this repository's `demo/`. The directory is
    generated; replace obsolete generated files there, not the paper's `assets/`.
 3. Serve this website locally and run the source repository's browser tests
-   (`tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
+   (`tests/presentation-browser.mjs`, `tests/session-browser.mjs`, `tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
    `/demo/` URL.
 4. Review the diff, commit, and push `main`. Wait for Pages to finish building,
    then check the public URL, including the WASM and texture requests.
