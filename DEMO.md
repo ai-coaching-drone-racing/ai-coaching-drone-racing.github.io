@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `f7811794` (2026-09-11 UTC).
+Current source revision: `3e8991d` (2026-09-11 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -89,23 +89,17 @@ human roll/yaw directly, with zero steering assistance and no coaching speech;
 thrust and pitch stay expert-controlled. It is not four-axis manual flight.
 MIA and AI Coaching use the original HCI tracking and L2C policies, respectively,
 including evaluation and recovery scheduling, not fixed blend substitutes.
-Selecting a method pauses; Start flying begins a fresh trial.
-**Compare 3 modes** runs these methods in that order, 45 seconds of active wall
-time per round. Rounds reset to the same start and pause between methods;
-operators can finish early.
-The input/applied markers show the human and actual simulator commands. The
-summary reports active time, gates and resets, with a local JSON download
-(`assistance-comparison/v2`, including method IDs, live blends and phases).
-Pauses, tutorial inspection and controller disconnects do not consume round
-time. Both wall time and simulated time are recorded because slow clients can
-advance less simulation within a round. This compares control feel, not learning
-outcomes. The fixed order is for presentations, not a counterbalanced human study.
+Selecting a method applies it immediately and preserves whether the flight is
+paused or running. Modes can be chosen in any order; there is no timed comparison,
+next-round dialog, or locked study sequence. The input/applied markers show human
+and actual simulator steering. Flight settings exports a local JSON flight log
+with flight rows, ended coaching trials and audio-cue events.
 
 The separate **HCI methods** tab (also selectable with `?experience=hci`) has
 a **Coaching method** selector offering **L2C / AI Coaching**, **MIA / Minimal
-intervention**, and **RBF / Rule-based fading**. Changing the selection pauses
-the flight and ends any active trial. **Start flying** begins a fresh trial of
-the selected method with independent scores and skill beliefs. **Use
+intervention**, and **RBF / Rule-based fading**. Changing the selection applies the chosen method and starts a fresh trial with
+independent scores and skill beliefs, preserving the pause/run state.
+**Start flying** leaves autopilot using the selected method. **Use
 autopilot** ends that trial and returns control to the expert without changing
 the pause state. A separate persistent **Current mode** label always shows
 what is active, including on phones. Camera buttons indicate the selected
@@ -117,24 +111,22 @@ with per-gate Bayesian skill inference. All three retain HCI's stage-1
 evaluation cadence, 30% evaluation blend and 95% recovery blend. Trial exports
 separate ended trials and include method, phase, blend, skill and posterior.
 Fixed-skill and fixed-blend debug modes remain available in Settings. RBF and the
-full study flow remain available separately from the three-option presentation.
+underlying research study helpers remain in the source; the browser exposes direct
+mode selection only.
 **Settings > Control mode > Fixed assistance** now allows 0-100% steering blend.
 At 0%, roll/yaw follow human input directly, including after resets; thrust/pitch
 and optional spoken guidance remain automatic. No Coach also removes guidance.
 The slider updates the live blend immediately while paused without moving the drone.
 This does not change the original HCI/session blend limits.
 
-**Session**, next to Tutorial, sequences **Pre-test -> Coaching -> Post-test**
-with an optional participant ID and one locked method. Each stage is started
-and finished explicitly; there is no invented duration or lap-count cutoff.
-Stage 0/2 use continuous evaluation with 30% roll/yaw AI blend; thrust/pitch
-stay AI-controlled. Stage 1 uses the existing adaptive/scheduled behavior.
-These tests are not fully unassisted. Stages start with fresh beliefs, matching
-separate native launches. Session pauses on controller disconnection, keeps
-manual resets in the record, and shows time, laps, failures and best lap.
-Download session produces a local ZIP with metadata, 50 Hz action/pose rows,
-events and summaries for each stage. Records are held in memory until download;
-there is no server upload. Unsaved records trigger a leave-page warning.
+The sequential **Session** and **Compare 3 modes** interfaces are removed. A
+controller disconnect pauses without changing the selected flight mode. Tutorial
+inspection also leaves the flight paused. Per-method HCI evaluation and recovery
+still operate internally; no pre-test/coaching/post-test protocol is imposed.
+
+The left stick's horizontal axis writes the drone yaw action. It does not orbit
+the camera independently. FPV and Chase follow the drone orientation; **Track**
+keeps its world position and orientation fixed while the drone turns.
 
 Audio now defaults on after the first click/key gesture. The sound button
 (also visible on phones) remembers mute state. Original HCI evaluation,
@@ -146,8 +138,7 @@ voice-assisted. MIA and AI Coaching in Demo play the original directional
 corrections and encouragement; No Coach retains only rotor sound and music.
 The old welcome recording and all of its start hooks are removed
 because it tells users to press a square button to start, which is not the
-browser flow. The native recording remains unchanged. Comparison exports
-record audio settings and cue events. Rotor sound is synthesized locally,
+browser flow. The native recording remains unchanged. Flight logs record audio-cue events. Rotor sound is synthesized locally,
 softened under speech.
 
 The six original background tracks were recovered from the old machine's
@@ -170,7 +161,7 @@ of the initial scene download.
 2. Copy only `dist-pages/` into this repository's `demo/`. The directory is
    generated; replace obsolete generated files there, not the paper's `assets/`.
 3. Serve this website locally and run the source repository's browser tests
-   (`tests/startup-browser.mjs`, `tests/presentation-browser.mjs`, `tests/session-browser.mjs`, `tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
+   (`tests/startup-browser.mjs`, `tests/presentation-browser.mjs`, `tests/manual-modes-browser.mjs`, `tests/browser.mjs`, `tests/tutorial.mjs`, `tests/venue.mjs`, and `tests/event.mjs`) with `TEST_URL` set to the local
    `/demo/` URL.
 4. Review the diff, commit, and push `main`. Wait for Pages to finish building,
    then check the public URL, including the WASM and texture requests.
@@ -187,9 +178,9 @@ numerical tests against the original Python definitions. Each method also
 completed four laps in scripted MuJoCo smoke tests; MIA still had three
 collisions. These are implementation checks, not human performance rankings.
 All three retain the existing MuJoCo one-gate-back collision recovery, not a
-claim of identical Isaac reset/contact behavior. The browser stage wrapper
-and audio have separate UI, source-scheduler, decoding and ZIP export tests;
-they do not validate the full human study or reproduce every Isaac HUD visual.
+claim of identical Isaac reset/contact behavior. Direct mode selection, yaw/camera behavior, audio decoding and flight-log export
+have browser tests, alongside source-scheduler reference checks. They do not
+validate the full human study or reproduce every Isaac HUD visual.
 The native Python demo is unchanged. Keyboard, virtual-gamepad and WebAudio
 tests do not replace testing a physical controller and speakers.
 
