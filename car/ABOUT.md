@@ -11,8 +11,11 @@ A browser-only **3D driving practice prototype**, based on the size and interfac
 - Chase, onboard RGB-style perspective, and circuit cameras. The onboard view is a synthetic monocular rendering, **not a calibrated ZED stereo/depth sensor**.
 - Camera placement uses the published ZED X Mini body mount, converted from the rear-axle-ground `base_link` frame to the simulator root. The extra camera housing is illustrative. CAD electronics/sensor details are not a measured replica of xLab's current car; camera intrinsics remain uncalibrated.
 - Authored practice circuit with straights and connected corners in a 3D room. This flat-ground practice layout is not an imported map of the lab.
-- A pure-pursuit demo driver. It reads perfect simulator state; it is **not** a vision policy, transferred expert, or adaptive AI coach.
-- Session JSON export with 10 Hz state/control samples (up to 36,000), mode changes, contact episodes, recoveries and laps. Manual/demo best times are separate; a recovery or mid-lap mode change invalidates the partial lap.
+- An IL driving network trained by cloning a pure-pursuit reference in this exact MuJoCo WASM environment. It reads simulator state and local route geometry, **not camera pixels**. Autonomous IL driving is available from Settings.
+- No Coach, Fixed Assist (including exactly 0%) and Adaptive Coach. The latter is a small trained cost-prediction network choosing between five blend levels using driving state, human commands and recent command disagreement/variation. Its training objective penalizes short-horizon driving error, collision and excessive intervention. It is **not the original paper's L2C**, and does not establish faster human learning. Training uses six synthetic controller-error families, not measured human skill levels.
+- Assistance does not accelerate without the user's throttle or cancel a brake. The percentage shown is the actual current blend, not a measured human skill score.
+- Optional 20-second solo test, 60-second practice in the selected assistance mode, and 20-second solo retest. The phases pause between transitions; tests start at the same initial car state. Results are descriptive, not causal learning evidence. Changing mode, speed or fixed assistance cancels the sequence.
+- Session JSON export with 10 Hz state/control samples (up to 36,000), original human commands, applied commands, assistance/history, phase results, mode changes, contact episodes, recoveries and laps. Best times are separate by mode; recovery or a mid-lap mode change invalidates the partial lap. Session JSON includes the model training/data identifiers and limitations.
 
 ## Controls
 

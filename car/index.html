@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#011f5b"/><meta name="darkreader-lock"/><title>AI Coaching | Driving Lab</title><link rel="icon" href="data:,"/>  <script type="module" crossorigin src="/car/assets/index-BoYl2z5C.js"></script>
-  <link rel="stylesheet" crossorigin href="/car/assets/index-thHrvLhM.css">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#011f5b"/><meta name="darkreader-lock"/><title>AI Coaching | Driving Lab</title><link rel="icon" href="data:,"/>  <script type="module" crossorigin src="/car/assets/index-DY0wbulY.js"></script>
+  <link rel="stylesheet" crossorigin href="/car/assets/index-DLt2PWYM.css">
 </head>
 <body>
   <canvas id="world" aria-label="Three-dimensional RoboRacer driving circuit"></canvas>
   <header>
     <div class="brand"><div class="mark">AI</div><div><h1>AI Coaching</h1><span>Driving Lab</span></div></div>
-    <div class="session"><span id="mode-label">Manual driving</span><span class="prototype">Simulation prototype</span></div>
+    <div class="session"><span id="mode-label">No Coach</span><span class="prototype" id="phase-label">Simulation prototype</span></div>
     <button id="controls" class="help" title="Controls (H)"><i data-lucide="gamepad-2"></i><span>Controls</span></button>
   </header>
   <aside class="telemetry" aria-label="Driving telemetry">
     <div class="speed"><strong id="speed">0.0</strong><span>km/h</span></div>
-    <dl><div><dt>LAP</dt><dd id="laps">0</dd></div><div><dt>TIME</dt><dd id="timer">0:00.0</dd></div><div><dt>BEST</dt><dd id="best">--</dd></div><div><dt>CONTACTS</dt><dd id="hits">0</dd></div></dl>
+    <dl><div><dt>LAP</dt><dd id="laps">0</dd></div><div><dt>TIME</dt><dd id="timer">0:00.0</dd></div><div><dt>BEST</dt><dd id="best">--</dd></div><div><dt>CONTACTS</dt><dd id="hits">0</dd></div><div><dt>ASSISTANCE</dt><dd id="assistance">0%</dd></div></dl>
   </aside>
   <div id="paused" class="pause-state"><i data-lucide="pause"></i><span>Paused</span></div>
   <div id="loading" role="status">Loading circuit...</div>
@@ -23,9 +23,9 @@
     <button data-pedal="throttle" title="Accelerate"><i data-lucide="chevrons-up"></i></button>
   </div>
   <footer class="toolbar">
-    <div class="segmented" role="group" aria-label="Driving mode"><button data-mode="manual" aria-pressed="true">Drive</button><button data-mode="demo" aria-pressed="false">Demo lap</button></div>
+    <div class="segmented driving-modes" role="group" aria-label="Driving mode"><button data-mode="manual" aria-pressed="true">No Coach</button><button data-mode="fixed" aria-pressed="false" disabled>Fixed Assist</button><button data-mode="coach" aria-pressed="false" disabled>Adaptive Coach</button></div>
     <div class="separator"></div>
-    <div class="segmented cameras" role="group" aria-label="Camera"><button data-view="chase" aria-pressed="true">Chase</button><button data-view="onboard" aria-pressed="false">Onboard</button><button data-view="circuit" aria-pressed="false">Circuit</button></div>
+    <div class="segmented cameras" role="group" aria-label="Camera"><button data-view="chase" aria-pressed="true" title="Chase camera" aria-label="Chase camera"><i data-lucide="orbit"></i><span>Chase</span></button><button data-view="onboard" aria-pressed="false" title="Onboard camera" aria-label="Onboard camera"><i data-lucide="video"></i><span>Onboard</span></button><button data-view="circuit" aria-pressed="false" title="Circuit camera" aria-label="Circuit camera"><i data-lucide="map"></i><span>Circuit</span></button></div>
     <div class="separator"></div>
     <button id="pause" class="icon" title="Resume (Space)" aria-label="Resume"><i data-lucide="play"></i></button>
     <button id="recover" class="icon" title="Return to track (R)" aria-label="Return to track"><i data-lucide="rotate-ccw"></i></button>
@@ -43,9 +43,15 @@
   </dialog>
   <dialog id="settings-dialog">
     <div class="dialog-head"><h2>Session Settings</h2><button data-close class="icon" aria-label="Close settings" title="Close"><i data-lucide="x"></i></button></div>
-    <label class="setting">Speed limit <output id="limit-label">2.0 m/s</output><input id="speed-limit" type="range" min=".8" max="3" step=".1" value="2"/></label>
+    <label class="setting">Speed limit <output id="limit-label">1.8 m/s</output><input id="speed-limit" type="range" min=".8" max="2" step=".1" value="1.8"/></label>
+    <label class="setting">Fixed assistance <output id="assist-label">85%</output><input id="fixed-assistance" type="range" min="0" max="1" step=".05" value=".85"/></label>
     <label class="check"><input id="reference-line" type="checkbox"/>Reference line</label>
+    <div class="session-actions"><button id="il-drive" disabled><i data-lucide="play"></i>IL driver</button><button id="practice-session" disabled><i data-lucide="timer"></i>Practice & test</button></div>
     <button id="reset-session"><i data-lucide="rotate-ccw"></i>New session</button>
     <a class="about" href="./ABOUT.md" target="_blank" rel="noopener">Platform, sources & limitations</a>
+  </dialog>
+  <dialog id="results-dialog">
+    <div class="dialog-head"><h2>Session Results</h2><button data-close class="icon" aria-label="Close results" title="Close"><i data-lucide="x"></i></button></div>
+    <table class="session-results"><thead><tr><th>Solo test</th><th>Before</th><th>After</th></tr></thead><tbody id="session-results"></tbody></table>
   </dialog>
 </body></html>
