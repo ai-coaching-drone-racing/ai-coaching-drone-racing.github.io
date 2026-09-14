@@ -20,7 +20,7 @@ Maintained source: `Waybaba/ai_coaching`, branch `codex/hci-mujoco-demo`,
 directory `drone_mujoco/web`. Source-repository access is separate from access
 to this public website.
 Initial published build: `a9fcb5f82352673a836ce0723fa018109947d29f` (2026-09-10 UTC).
-Current source revision: `3e8991d` (2026-09-11 UTC).
+Current source revision: `c1dd71c9` (2026-09-13 UTC).
 
 The simulator uses Penn blue `#011f5b` for branding and Tutorial, Penn red
 `#990000` for primary commands and the target gate, blue for other gates,
@@ -135,11 +135,11 @@ under `demo/audio/`, together with provenance notes. The browser decodes all
 29 original samples and pauses playback with the simulation. The executable
 HCI source enables direction cues in test stages too, so tests remain
 voice-assisted. MIA and AI Coaching in Demo play the original directional
-corrections and encouragement; No Coach retains only rotor sound and music.
+corrections and encouragement; No Coach retains only background music.
 The old welcome recording and all of its start hooks are removed
 because it tells users to press a square button to start, which is not the
-browser flow. The native recording remains unchanged. Flight logs record audio-cue events. Rotor sound is synthesized locally,
-softened under speech.
+browser flow. The native recording remains unchanged. Flight logs record audio-cue events.
+Synthesized rotor hum is removed entirely; music and voice cues are unchanged.
 
 The six original background tracks were recovered from the old machine's
 Git-ignored BGM directory and converted to complete MP3s, adding about 33 MB
