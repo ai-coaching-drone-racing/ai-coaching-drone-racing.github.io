@@ -1,0 +1,604 @@
+{
+  "experiments": [
+    {
+      "name": "fsm_seed0",
+      "family": "fsm",
+      "seed": 0,
+      "outcomes": {
+        "frozen_learned": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.10249238926917315,
+          "final_lap": 0.0,
+          "mean_alpha": 0.5004667329291502,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "full": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.10249238926917315,
+          "final_lap": 0.0,
+          "mean_alpha": 1.0,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "half": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.5,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        },
+        "learned": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.5043813399970531,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        },
+        "none": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.5799810066819191,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.0,
+          "mean_gain": 0.47748861741274595,
+          "final_level": 2.0
+        },
+        "random": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.744848158210516,
+          "final_lap": 0.703125,
+          "mean_alpha": 0.4069194744030635,
+          "mean_gain": 0.6423557689413428,
+          "final_level": 2.5
+        },
+        "untrained": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.49922483911116916,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        }
+      },
+      "phase": "reevaluate",
+      "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true",
+      "learned_minus_none": [
+        0.0,
+        0.1619991809129715,
+        0.0,
+        0.0
+      ],
+      "learned_minus_fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_control_passed": true,
+      "training": {
+        "elapsed_seconds": 9428.625554313883,
+        "episodes": 64,
+        "family": "fsm",
+        "kind": "full reevaluation of fixed final checkpoint",
+        "seed": 0,
+        "status": "completed",
+        "training_source": "outputs/car_coaching/mjx_bilevel_20260917/fsm_seed0"
+      }
+    },
+    {
+      "name": "fsm_seed1",
+      "family": "fsm",
+      "seed": 1,
+      "outcomes": {
+        "frozen_learned": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.10249238926917315,
+          "final_lap": 0.0,
+          "mean_alpha": 0.4663639875749747,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "full": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.10249238926917315,
+          "final_lap": 0.0,
+          "mean_alpha": 1.0,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "half": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.5,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        },
+        "learned": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.44538985441128415,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        },
+        "none": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.5799810066819191,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.0,
+          "mean_gain": 0.47748861741274595,
+          "final_level": 2.0
+        },
+        "random": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.744848158210516,
+          "final_lap": 0.703125,
+          "mean_alpha": 0.4069194744030635,
+          "mean_gain": 0.6423557689413428,
+          "final_level": 2.5
+        },
+        "untrained": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.49954892694950104,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        }
+      },
+      "phase": "reevaluate",
+      "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true",
+      "learned_minus_none": [
+        0.0,
+        0.1619991809129715,
+        0.0,
+        0.0
+      ],
+      "learned_minus_fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_control_passed": true,
+      "training": {
+        "elapsed_seconds": 9441.87562522851,
+        "episodes": 64,
+        "family": "fsm",
+        "kind": "full reevaluation of fixed final checkpoint",
+        "seed": 1,
+        "status": "completed",
+        "training_source": "outputs/car_coaching/mjx_bilevel_20260917/fsm_seed1"
+      }
+    },
+    {
+      "name": "fsm_seed2",
+      "family": "fsm",
+      "seed": 2,
+      "outcomes": {
+        "frozen_learned": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.10249238926917315,
+          "final_lap": 0.0,
+          "mean_alpha": 0.4918089074393113,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "full": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.10249238926917315,
+          "final_lap": 0.0,
+          "mean_alpha": 1.0,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "half": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.5,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        },
+        "learned": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.4831160381436348,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        },
+        "none": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.5799810066819191,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.0,
+          "mean_gain": 0.47748861741274595,
+          "final_level": 2.0
+        },
+        "random": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.744848158210516,
+          "final_lap": 0.703125,
+          "mean_alpha": 0.4069194744030635,
+          "mean_gain": 0.6423557689413428,
+          "final_level": 2.5
+        },
+        "untrained": {
+          "students": 4,
+          "initial_score": 0.10249238926917315,
+          "final_score": 0.620480801910162,
+          "final_lap": 0.515625,
+          "mean_alpha": 0.5010909090439478,
+          "mean_gain": 0.5179884126409888,
+          "final_level": 2.25
+        }
+      },
+      "phase": "campaign",
+      "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true",
+      "learned_minus_none": [
+        0.0,
+        0.1619991809129715,
+        0.0,
+        0.0
+      ],
+      "learned_minus_fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_control_passed": true,
+      "training": {
+        "elapsed_seconds": 22819.09208612889,
+        "episodes": 64,
+        "family": "fsm",
+        "seed": 2,
+        "status": "completed"
+      }
+    },
+    {
+      "name": "ppo_seed0",
+      "family": "ppo",
+      "seed": 0,
+      "outcomes": {
+        "frozen_learned": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.002473609369189944,
+          "final_lap": 0.0,
+          "mean_alpha": 0.34326135367155075,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "full": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": -0.01762622850947082,
+          "final_lap": 0.0,
+          "mean_alpha": 1.0,
+          "mean_gain": -0.020099837878660765,
+          "final_level": 0.0
+        },
+        "half": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.014774907380342484,
+          "final_lap": 0.0,
+          "mean_alpha": 0.5,
+          "mean_gain": 0.01230129801115254,
+          "final_level": 0.0
+        },
+        "learned": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.4476245045661926,
+          "final_lap": 0.25,
+          "mean_alpha": 0.3393157261113326,
+          "mean_gain": 0.4451508951970027,
+          "final_level": 0.0
+        },
+        "none": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.9433059096336365,
+          "final_lap": 0.953125,
+          "mean_alpha": 0.0,
+          "mean_gain": 0.9408323002644465,
+          "final_level": 0.0
+        },
+        "random": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.4024792374111712,
+          "final_lap": 0.25,
+          "mean_alpha": 0.4069194744030635,
+          "mean_gain": 0.40000562804198125,
+          "final_level": 0.0
+        },
+        "untrained": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.008516379399225116,
+          "final_lap": 0.0,
+          "mean_alpha": 0.5010156035423279,
+          "mean_gain": 0.006042770030035172,
+          "final_level": 0.0
+        }
+      },
+      "phase": "reevaluate",
+      "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true",
+      "learned_minus_none": [
+        -0.813530832529068,
+        -0.00024211406707763672,
+        -0.5212406516075134,
+        -0.6477120220661163
+      ],
+      "learned_minus_fixed": [
+        0.11195966601371765,
+        0.9879650995135307,
+        0.35006533190608025,
+        0.28140829131007195
+      ],
+      "frozen_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_control_passed": true,
+      "training": {
+        "elapsed_seconds": 7667.687565723434,
+        "episodes": 64,
+        "family": "ppo",
+        "kind": "full reevaluation of fixed final checkpoint",
+        "seed": 0,
+        "status": "completed",
+        "training_source": "outputs/car_coaching/mjx_bilevel_20260917/ppo_seed0"
+      }
+    },
+    {
+      "name": "ppo_seed1",
+      "family": "ppo",
+      "seed": 1,
+      "outcomes": {
+        "frozen_learned": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.002473609369189944,
+          "final_lap": 0.0,
+          "mean_alpha": 0.2924486498037974,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "full": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": -0.01762622850947082,
+          "final_lap": 0.0,
+          "mean_alpha": 1.0,
+          "mean_gain": -0.020099837878660765,
+          "final_level": 0.0
+        },
+        "half": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.014774907380342484,
+          "final_lap": 0.0,
+          "mean_alpha": 0.5,
+          "mean_gain": 0.01230129801115254,
+          "final_level": 0.0
+        },
+        "learned": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.3839287757873535,
+          "final_lap": 0.015625,
+          "mean_alpha": 0.2949313707649708,
+          "mean_gain": 0.38145516641816357,
+          "final_level": 0.0
+        },
+        "none": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.9433059096336365,
+          "final_lap": 0.953125,
+          "mean_alpha": 0.0,
+          "mean_gain": 0.9408323002644465,
+          "final_level": 0.0
+        },
+        "random": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.4024792374111712,
+          "final_lap": 0.25,
+          "mean_alpha": 0.4069194744030635,
+          "mean_gain": 0.40000562804198125,
+          "final_level": 0.0
+        },
+        "untrained": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.05136648006737232,
+          "final_lap": 0.0,
+          "mean_alpha": 0.4985065720975399,
+          "mean_gain": 0.04889287069818238,
+          "final_level": 0.0
+        }
+      },
+      "phase": "campaign",
+      "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true",
+      "learned_minus_none": [
+        -0.6145814061164856,
+        -0.588543027639389,
+        -0.5206300616264343,
+        -0.5137540400028229
+      ],
+      "learned_minus_fixed": [
+        0.31090909242630005,
+        0.39966418594121933,
+        0.35067592188715935,
+        0.4153662733733654
+      ],
+      "frozen_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_control_passed": true,
+      "training": {
+        "elapsed_seconds": 23509.028881268576,
+        "episodes": 64,
+        "family": "ppo",
+        "seed": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "name": "ppo_seed2",
+      "family": "ppo",
+      "seed": 2,
+      "outcomes": {
+        "frozen_learned": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.002473609369189944,
+          "final_lap": 0.0,
+          "mean_alpha": 0.432545514156421,
+          "mean_gain": 0.0,
+          "final_level": 0.0
+        },
+        "full": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": -0.01762622850947082,
+          "final_lap": 0.0,
+          "mean_alpha": 1.0,
+          "mean_gain": -0.020099837878660765,
+          "final_level": 0.0
+        },
+        "half": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.014774907380342484,
+          "final_lap": 0.0,
+          "mean_alpha": 0.5,
+          "mean_gain": 0.01230129801115254,
+          "final_level": 0.0
+        },
+        "learned": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.147807152941823,
+          "final_lap": 0.0,
+          "mean_alpha": 0.43574010332425434,
+          "mean_gain": 0.14533354357263306,
+          "final_level": 0.0
+        },
+        "none": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.9433059096336365,
+          "final_lap": 0.953125,
+          "mean_alpha": 0.0,
+          "mean_gain": 0.9408323002644465,
+          "final_level": 0.0
+        },
+        "random": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": 0.4024792374111712,
+          "final_lap": 0.25,
+          "mean_alpha": 0.4069194744030635,
+          "mean_gain": 0.40000562804198125,
+          "final_level": 0.0
+        },
+        "untrained": {
+          "students": 4,
+          "initial_score": 0.002473609369189944,
+          "final_score": -0.015188503311946988,
+          "final_lap": 0.0,
+          "mean_alpha": 0.4999141904215018,
+          "mean_gain": -0.017662112681136932,
+          "final_level": 0.0
+        }
+      },
+      "phase": "campaign",
+      "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true",
+      "learned_minus_none": [
+        -0.899772398173809,
+        -0.7571035325527191,
+        -0.6541560739278793,
+        -0.8709630221128464
+      ],
+      "learned_minus_fixed": [
+        0.025718100368976593,
+        0.23110368102788925,
+        0.21714990958571434,
+        0.058157291263341904
+      ],
+      "frozen_gain": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frozen_control_passed": true,
+      "training": {
+        "elapsed_seconds": 21697.340365337208,
+        "episodes": 64,
+        "family": "ppo",
+        "seed": 2,
+        "status": "completed"
+      }
+    }
+  ],
+  "expected_coach_seeds": [
+    0,
+    1,
+    2
+  ],
+  "claim": "Updating synthetic students; human alignment untested. No significance claim from few students."
+}

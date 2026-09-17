@@ -1,0 +1,55 @@
+{
+  "arguments": {
+    "batch_episodes": 4,
+    "blocks": 6,
+    "envs": 16,
+    "episodes": 64,
+    "exam_starts": 4,
+    "exam_steps": 2400,
+    "family": "fsm",
+    "horizon": 128,
+    "output": "outputs/car_coaching/mjx_bilevel_20260917/deterministic/fsm_seed0",
+    "phase": "reevaluate",
+    "practice_updates": 8,
+    "preflight": "outputs/car_coaching/mjx_bilevel_20260917/preflight_fsm_deterministic",
+    "seed": 0,
+    "students": 4,
+    "test_seed": 70000,
+    "test_starts": 16,
+    "training_source": "outputs/car_coaching/mjx_bilevel_20260917/fsm_seed0"
+  },
+  "config": {
+    "blocks": 6,
+    "envs": 16,
+    "exam_starts": 4,
+    "exam_steps": 2400,
+    "family": "fsm",
+    "fsm_learning_rate": 4.0,
+    "fsm_noise_hold_steps": 10,
+    "horizon": 128,
+    "practice_updates": 8,
+    "score_repeatability_tolerance": 0.001,
+    "student_epochs": 4,
+    "student_lr": 0.0003,
+    "student_width": 64
+  },
+  "exam": "common reset seeds; no assistance, learner updates, optimizer updates or main RNG consumption",
+  "expert": {
+    "lap_rate": 1.0,
+    "path": "outputs/car_coaching/mjx_20260917/expert_seed0/train/policy_000300.msgpack",
+    "sha256": "9d1b1c43df0fa5a1f6e856bf088687a6408bdc67c128141b9da5162d50af7ed9"
+  },
+  "inspect_interval_seconds": 600,
+  "jax_version": "0.7.2",
+  "limitation": "Simulated learners, not validated human learning models",
+  "physical_gpu_permission": "0/1/2; reserve GPU3",
+  "reward": "post-minus-pre independent task return / track length; no alpha or practice term",
+  "role": "learning-Coach pilot",
+  "student_model": {
+    "learning_rate": 4.0,
+    "max_level": 4,
+    "max_noise": 0.35,
+    "min_noise": 0.01
+  },
+  "xla_flags": "--xla_gpu_exclude_nondeterministic_ops=true"
+}
