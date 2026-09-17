@@ -3,7 +3,11 @@
 Public deployment: https://ai-coaching-drone-racing.github.io/car-mjx/
 
 This is the MuJoCo/MJX car expert experiment, separate from the older
-`/car/` driving prototype and `/demo/` drone demo. It has no Coach yet.
+`/car/` driving prototype and `/demo/` drone demo. This driving page has no
+Coach control mode yet. The separate [Coach results page](results/) records
+three completed two-seed experiments, including failures and raw results.
+The latest pilot shows a large alpha difference across frozen students but
+does not pass all acceptance gates or outperform fixed help on safety.
 
 ## Run
 

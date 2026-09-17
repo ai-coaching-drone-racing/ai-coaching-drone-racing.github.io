@@ -1,0 +1,172 @@
+{
+  "seeds": [
+    {
+      "seed": 0,
+      "skill_spread": 0.9549050980131142,
+      "spearman_alpha_vs_solo_progress": -0.5773502691896258,
+      "weak_minus_strong_alpha": 0.006800631682078118,
+      "weak_solo_progress": 0.6816983006622953,
+      "weak_coached_progress": 1.0,
+      "passed": false,
+      "level_results": [
+        {
+          "iteration": 0,
+          "student_seed": 1,
+          "solo_progress": 0.045094901986885816,
+          "solo_lap_rate": 0.0,
+          "common_state_alpha": 0.6009535789489746,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.6020875269286012
+        },
+        {
+          "iteration": 10,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5996852517127991,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.6019276395604441
+        },
+        {
+          "iteration": 20,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.596186101436615,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5968559636232701
+        },
+        {
+          "iteration": 30,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5940807461738586,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5944720979890681
+        },
+        {
+          "iteration": 50,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5930982232093811,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5931731409426657
+        },
+        {
+          "iteration": 80,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5925981402397156,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5921425810578528
+        },
+        {
+          "iteration": 150,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5919902920722961,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5918205211472638
+        },
+        {
+          "iteration": 300,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5918346047401428,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5926954756722929
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "skill_spread": 0.9549053360824473,
+      "spearman_alpha_vs_solo_progress": -0.5773502691896258,
+      "weak_minus_strong_alpha": 0.00801074504852295,
+      "weak_solo_progress": 0.6816982213058509,
+      "weak_coached_progress": 1.0,
+      "passed": false,
+      "level_results": [
+        {
+          "iteration": 0,
+          "student_seed": 1,
+          "solo_progress": 0.04509466391755268,
+          "solo_lap_rate": 0.0,
+          "common_state_alpha": 0.6049023270606995,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.6084404576807904
+        },
+        {
+          "iteration": 10,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.6019762754440308,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.6067326573904277
+        },
+        {
+          "iteration": 20,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5985479950904846,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.6004974068349176
+        },
+        {
+          "iteration": 30,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5961490273475647,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.597068338279947
+        },
+        {
+          "iteration": 50,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.595141589641571,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5953585126277628
+        },
+        {
+          "iteration": 80,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5953183770179749,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.594424216534068
+        },
+        {
+          "iteration": 150,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5938560366630554,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5931948400046683
+        },
+        {
+          "iteration": 300,
+          "student_seed": 1,
+          "solo_progress": 1.0,
+          "solo_lap_rate": 1.0,
+          "common_state_alpha": 0.5922199487686157,
+          "coached_lap_rate": 1.0,
+          "coached_alpha": 0.5930503582184532
+        }
+      ]
+    }
+  ],
+  "passed": false,
+  "scope": "Frozen-student adaptive assistance only; no claim of teaching or counterfactual superiority"
+}
