@@ -1,0 +1,10 @@
+{
+  "mujoco": "3.13.0",
+  "model_sha256": "eb56958b08939d8c409202203ca0b632d437e401dde571c3e9cf01de34911a3f",
+  "substeps": 10,
+  "control_dt": 0.05,
+  "model": "prototype articulated rear-driven Ackermann car; not calibrated to hardware",
+  "physics": "MuJoCo contacts and actuators, not the prior F1TENTH dynamics",
+  "policy_file": "policy.json",
+  "expert_accepted": true
+}
