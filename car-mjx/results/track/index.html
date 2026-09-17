@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Coaching | Spatial Alpha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="../../../">AI Coaching <span>Car racing</span></a><a href="../">Experiment results &rarr;</a></header>
+  <main>
+    <div class="heading"><div><p class="eyebrow">Spielberg / held-out student policies</p><h1>Assistance on the track</h1></div><span class="tag">Recorded evaluation</span></div>
+    <p class="intro">Learned assistance &alpha; along actual driving trajectories. Every student uses the same color scale and paired starting conditions.</p>
+    <div class="controls">
+      <label>Coach seed<select id="seed"><option value="0">Seed 0</option><option value="1">Seed 1</option></select></label>
+      <label>Paired start<select id="start"></select></label>
+      <fieldset><legend>View</legend><div class="modes"><label><input type="radio" name="mode" value="trajectory" checked><span>Single drive</span></label><label><input type="radio" name="mode" value="mean"><span>16-start route mean</span></label></div></fieldset>
+    </div>
+    <div class="scale"><div class="scale-head"><strong>Assistance &alpha;</strong><span>Fixed range: 0 &ndash; 1</span></div><div id="colorbar"></div><div class="scale-labels"><span>0 &middot; Student only</span><span>0.5</span><span>1 &middot; Expert only</span></div></div>
+    <p id="status" role="status">Loading recorded trajectories...</p>
+    <div class="comparison">
+      <section class="panel" id="panel-a">
+        <label class="student-label">Student A<select id="student-a"></select></label>
+        <dl class="stats"><div><dt>Solo laps</dt><dd data-stat="solo">--</dd></div><div><dt>Coached laps</dt><dd data-stat="coached">--</dd></div><div><dt>Mean &alpha;</dt><dd data-stat="alpha">--</dd></div></dl>
+        <div class="plot"><canvas aria-label="Student A: trajectory colored by assistance alpha"></canvas><div class="tooltip" hidden></div></div>
+        <div class="outcome" data-outcome></div>
+      </section>
+      <section class="panel" id="panel-b">
+        <label class="student-label">Student B<select id="student-b"></select></label>
+        <dl class="stats"><div><dt>Solo laps</dt><dd data-stat="solo">--</dd></div><div><dt>Coached laps</dt><dd data-stat="coached">--</dd></div><div><dt>Mean &alpha;</dt><dd data-stat="alpha">--</dd></div></dl>
+        <div class="plot"><canvas aria-label="Student B: trajectory colored by assistance alpha"></canvas><div class="tooltip" hidden></div></div>
+        <div class="outcome" data-outcome></div>
+      </section>
+    </div>
+    <p class="caption" id="caption"></p>
+    <div class="caveat"><strong>Observed adaptation, not complete success.</strong> Students are frozen checkpoints. Both Coach seeds finish fewer laps than fixed 0.5 assistance; one misses the preset adaptation threshold. This is not evidence of student learning or a calibrated ability score.</div>
+    <details><summary>All 16 students, same start</summary><p>Paired start 0, with unsuccessful drives retained. Hollow green circle: first saved position. Filled green circle: completed lap. Red cross: unsuccessful end.</p><a href="seed0-overview.png">Full-size overview: Coach seed 0</a><img src="seed0-overview.png" alt="Sixteen student trajectories at the same start, Coach seed zero" loading="lazy"><a href="seed1-overview.png">Full-size overview: Coach seed 1</a><img src="seed1-overview.png" alt="Sixteen student trajectories at the same start, Coach seed one" loading="lazy"></details>
+    <details><summary>Measurement and interpretation</summary><ul>
+      <li>Single-drive colors represent the &alpha; applied during each segment, not the decision after reaching its endpoint. Controls run at 20 Hz; positions were saved every 10 steps (0.5 s), with shorter terminal blocks.</li>
+      <li>The reset position was not saved. The first block is omitted from the drawing, but included in the reported whole-episode mean. Lines are endpoint chords, not a reconstruction of high-frequency motion. Nothing is drawn after termination.</li>
+      <li>Route means project these chords onto 128 equal-distance bins (about 2.68 m). Time weighting is applied within each drive, then the means of drives visiting that bin are averaged equally. Grey means unobserved, not zero assistance. Coverage can differ because of failure or visited-state differences.</li>
+      <li>Student labels identify training seed and checkpoint update, not ground-truth ability. Solo/coached lap rates are measured on all 16 starts. Different source seeds are separate students, not a single learning sequence.</li>
+      <li>Spatial differences are descriptive: turn geometry, speed and action disagreement can all affect &alpha;. This figure alone does not establish why the Coach chose to intervene.</li>
+    </ul></details>
+    <footer><span>Mixed-ability counterfactual value Coach &middot; 2026-09-17</span><nav><a href="metadata.json">Track / methods</a><a href="seed0.json">Seed 0 data</a><a href="seed1.json">Seed 1 data</a><a href="../../sim/TRACK-LICENSE">Track license</a></nav></footer>
+  </main>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>
