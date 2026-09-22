@@ -23,11 +23,12 @@ diffuse daylight as in a cross-polarized material scan.
 The original scene textures, meshes, gates and policies retain their original
 ownership and provenance in `../sim/asset-provenance.json`.
 
-## Penn Wall Logo
+## Penn Brand Asset
 
 `penn-logo.png` is the unmodified RGB Penn shield-and-wordmark image from the
 University's official brand website, downloaded on 2026-09-10. It is displayed
-at its native 5:3 aspect ratio on one end wall; it is not generated or redrawn.
+inside the smaller multi-organization side-wall strips; both course end walls
+use the generated AI Coaching wordmark. The Penn artwork is not redrawn.
 
 - Source page: https://branding.web-resources.upenn.edu/logos-and-branding/download-penn-logos
 - Asset: https://branding.web-resources.upenn.edu/sites/default/files/2022-03/UniversityofPennsylvania_SimplifiedLogo_RGB-2.png
