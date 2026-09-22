@@ -1,0 +1,1954 @@
+{
+  "source_sha256": {
+    "src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_env.py": "5c8b9bc1fd0f0f1d1711b2ef41c625db8ef605df6cf643f3ca079449c43f2ad0",
+    "usd/Room.usd": "b2255c657ba4e9c0df5c1adeb4e3bdc306ba1f0add77a65f7c83b6f6e4725c82",
+    "usd/cf2x.usda": "bade9be9dbdc05804c73b92699a5b90d2f5bf9f4cff5f1dbf33f3260ff07e90b",
+    "usd/gate.usda": "92ddc9e2c0e27eab65aca2907ec20ef1ae85093fa5deef3ee7ea5f3dd397bd58"
+  },
+  "assets": [
+    {
+      "prim": "/Root/Root/SM_floor27/SM_floor02/SM_floor02",
+      "mesh": "mesh0000",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor28/SM_floor02/SM_floor02",
+      "mesh": "mesh0001",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor29/SM_floor02/SM_floor02",
+      "mesh": "mesh0002",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor30/SM_floor02/SM_floor02",
+      "mesh": "mesh0003",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor31/SM_floor02/SM_floor02",
+      "mesh": "mesh0004",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor32/SM_floor02/SM_floor02",
+      "mesh": "mesh0005",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X14/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0006",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X15/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0007",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X16/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0008",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X17/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0009",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X18/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0010",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X19/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0011",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner9_88/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section0",
+      "mesh": "mesh0012",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner9_88/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section1",
+      "mesh": "mesh0013",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner11/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section0",
+      "mesh": "mesh0014",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner11/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section1",
+      "mesh": "mesh0015",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner12/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section0",
+      "mesh": "mesh0016",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner12/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section1",
+      "mesh": "mesh0017",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M3_94/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0018",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M3_94/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0019",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M5/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0020",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M5/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0021",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner13/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0022",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner15/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0023",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner16/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0024",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M7/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0025",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M8/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0026",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M9/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0027",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner18/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0028",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner19/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0029",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor46/SM_floor02/SM_floor02",
+      "mesh": "mesh0030",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor47/SM_floor02/SM_floor02",
+      "mesh": "mesh0031",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor48/SM_floor02/SM_floor02",
+      "mesh": "mesh0032",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor49/SM_floor02/SM_floor02",
+      "mesh": "mesh0033",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor50/SM_floor02/SM_floor02",
+      "mesh": "mesh0034",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor51/SM_floor02/SM_floor02",
+      "mesh": "mesh0035",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M19/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0036",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M12/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0037",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M12/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0038",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M20/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0039",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner24/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0040",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner25/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0041",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner26/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0042",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X20/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0043",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X21/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0044",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X22/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0045",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X23/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0046",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X24/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0047",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X25/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0048",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor42_1324/SM_floor02/SM_floor02",
+      "mesh": "mesh0049",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor52/SM_floor02/SM_floor02",
+      "mesh": "mesh0050",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor53/SM_floor02/SM_floor02",
+      "mesh": "mesh0051",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor54/SM_floor02/SM_floor02",
+      "mesh": "mesh0052",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor55/SM_floor02/SM_floor02",
+      "mesh": "mesh0053",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor56/SM_floor02/SM_floor02",
+      "mesh": "mesh0054",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner10/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section0",
+      "mesh": "mesh0055",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner10/SM_WallA_InnerCorner/SM_WallA_InnerCorner/Section1",
+      "mesh": "mesh0056",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner14/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0057",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M14/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0058",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M14/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0059",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M15/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0060",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M15/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0061",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M16/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0062",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M16/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0063",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M17/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0064",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M17/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0065",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M18/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0066",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M18/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0067",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X26/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0068",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X27/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0069",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X28/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0070",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X29/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0071",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X30/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0072",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X31/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0073",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner27/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0074",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner28/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0075",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner29/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0076",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M10/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0077",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M21_1371/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0078",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M22_1372/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0079",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner30/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0080",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner31/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0081",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M26/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0082",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M27/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0083",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M28/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0084",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner32/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0085",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner33/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0086",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner34/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0087",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner35/SM_WallB_InnerCorner/SM_WallB_InnerCorner",
+      "mesh": "mesh0088",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M31/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0089",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor33/SM_floor02/SM_floor02",
+      "mesh": "mesh0090",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor34/SM_floor02/SM_floor02",
+      "mesh": "mesh0091",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor35/SM_floor02/SM_floor02",
+      "mesh": "mesh0092",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor36/SM_floor02/SM_floor02",
+      "mesh": "mesh0093",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor37/SM_floor02/SM_floor02",
+      "mesh": "mesh0094",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor39/SM_floor02/SM_floor02",
+      "mesh": "mesh0095",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor57/SM_floor02/SM_floor02",
+      "mesh": "mesh0096",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor58/SM_floor02/SM_floor02",
+      "mesh": "mesh0097",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor59/SM_floor02/SM_floor02",
+      "mesh": "mesh0098",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor60/SM_floor02/SM_floor02",
+      "mesh": "mesh0099",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor61/SM_floor02/SM_floor02",
+      "mesh": "mesh0100",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor62/SM_floor02/SM_floor02",
+      "mesh": "mesh0101",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor44/SM_floor02/SM_floor02",
+      "mesh": "mesh0102",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor63/SM_floor02/SM_floor02",
+      "mesh": "mesh0103",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor64/SM_floor02/SM_floor02",
+      "mesh": "mesh0104",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor65/SM_floor02/SM_floor02",
+      "mesh": "mesh0105",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor66/SM_floor02/SM_floor02",
+      "mesh": "mesh0106",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor67/SM_floor02/SM_floor02",
+      "mesh": "mesh0107",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X32/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0108",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X33/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0109",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X34/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0110",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X35/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0111",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X36/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0112",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X37/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0113",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X38/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0114",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X39/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0115",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X40/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0116",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X41/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0117",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X42/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0118",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X43/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0119",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X44/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0120",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X45/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0121",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X46/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0122",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X47/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0123",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X48/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0124",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X49/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0125",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M34/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0126",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M4/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0127",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M4/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0128",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M36/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0129",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M37/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0130",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M6/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0131",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M6/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0132",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M38/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0133",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M39/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0134",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M7/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0135",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M7/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0136",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M40/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0137",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M41/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0138",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M8/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0139",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M8/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0140",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M11/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0141",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M12/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0142",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M13/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0143",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M14/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0144",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M15/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0145",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M16/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0146",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M42/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0147",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M42/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0148",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M43/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0149",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M43/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0150",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M44/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0151",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M44/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0152",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor38/SM_floor02/SM_floor02",
+      "mesh": "mesh0153",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor40/SM_floor02/SM_floor02",
+      "mesh": "mesh0154",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor41/SM_floor02/SM_floor02",
+      "mesh": "mesh0155",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor43/SM_floor02/SM_floor02",
+      "mesh": "mesh0156",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor45/SM_floor02/SM_floor02",
+      "mesh": "mesh0157",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor68/SM_floor02/SM_floor02",
+      "mesh": "mesh0158",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor69/SM_floor02/SM_floor02",
+      "mesh": "mesh0159",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor70/SM_floor02/SM_floor02",
+      "mesh": "mesh0160",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor71/SM_floor02/SM_floor02",
+      "mesh": "mesh0161",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor72/SM_floor02/SM_floor02",
+      "mesh": "mesh0162",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor73/SM_floor02/SM_floor02",
+      "mesh": "mesh0163",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor74/SM_floor02/SM_floor02",
+      "mesh": "mesh0164",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor75/SM_floor02/SM_floor02",
+      "mesh": "mesh0165",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor76/SM_floor02/SM_floor02",
+      "mesh": "mesh0166",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor77/SM_floor02/SM_floor02",
+      "mesh": "mesh0167",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor78/SM_floor02/SM_floor02",
+      "mesh": "mesh0168",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor79/SM_floor02/SM_floor02",
+      "mesh": "mesh0169",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_floor80/SM_floor02/SM_floor02",
+      "mesh": "mesh0170",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner20/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0171",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M19/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0172",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M19/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0173",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner36/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0174",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner21/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0175",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M20/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0176",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M20/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0177",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner37/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0178",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner22/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0179",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M21/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0180",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M21/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0181",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_InnerCorner38/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0182",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M17/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0183",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M45/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0184",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M9/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0185",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M9/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0186",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M46/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0187",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M47/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0188",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M22/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0189",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M22/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0190",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M48/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0191",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M49/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0192",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M23/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0193",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M23/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0194",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X50/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0195",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X51/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0196",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X52/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0197",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X53/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0198",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X54/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0199",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X55/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0200",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X56/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0201",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X57/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0202",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X58/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0203",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X59/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0204",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X60/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0205",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X61/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0206",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X62/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0207",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X63/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0208",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X64/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0209",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X65/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0210",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X66/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0211",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X67/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0212",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X68/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0213",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X69/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0214",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X70/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0215",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X71/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0216",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X72/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0217",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X73/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0218",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X74/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0219",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X75/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0220",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X76/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0221",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X77/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0222",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X78/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0223",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X79/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0224",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X80/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0225",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X81/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0226",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X82/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0227",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X83/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0228",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X84/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0229",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_CeilingA_6X85/SM_CeilingA_6X6/SM_CeilingA_6X6",
+      "mesh": "mesh0230",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M6_113/SM_WallA_3M/SM_WallA_3M/Section0",
+      "mesh": "mesh0231",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M6_113/SM_WallA_3M/SM_WallA_3M/Section1",
+      "mesh": "mesh0232",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M10/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0233",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M10/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0234",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M18_460/SM_WallB_6M/SM_WallB_6M",
+      "mesh": "mesh0235",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M11/SM_WallA_6M/SM_WallA_6M/Section0",
+      "mesh": "mesh0236",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M11/SM_WallA_6M/SM_WallA_6M/Section1",
+      "mesh": "mesh0237",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M33/SM_WallA_3M/SM_WallA_3M/Section0",
+      "mesh": "mesh0238",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M33/SM_WallA_3M/SM_WallA_3M/Section1",
+      "mesh": "mesh0239",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M24/SM_WallA_3M/SM_WallA_3M/Section0",
+      "mesh": "mesh0240",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M24/SM_WallA_3M/SM_WallA_3M/Section1",
+      "mesh": "mesh0241",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M50/SM_WallB_3M/SM_WallB_3M",
+      "mesh": "mesh0242",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M51/SM_WallB_3M/SM_WallB_3M",
+      "mesh": "mesh0243",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M13/SM_WallA_3M/SM_WallA_3M/Section0",
+      "mesh": "mesh0244",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_6M13/SM_WallA_3M/SM_WallA_3M/Section1",
+      "mesh": "mesh0245",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M32/SM_WallB_3M/SM_WallB_3M",
+      "mesh": "mesh0246",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallA_3M35/SM_WallB_3M/SM_WallB_3M",
+      "mesh": "mesh0247",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_41/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0248",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_41/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0249",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_42/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0250",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_42/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0251",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_43/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0252",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_43/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0253",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_44/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0254",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_44/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0255",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_45/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0256",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_45/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0257",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_46/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0258",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_46/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0259",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_47/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0260",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_47/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0261",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_340/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0262",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_340/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0263",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_342/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0264",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_342/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0265",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_346/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0266",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_346/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0267",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_347/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0268",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_347/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0269",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_348/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0270",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_348/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0271",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_28/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0272",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_28/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0273",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_29/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0274",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_29/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0275",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_30/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0276",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_30/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0277",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_355/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0278",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_355/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0279",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_32/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0280",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_32/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0281",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_356/SM_LampCeilingA_04/Section0",
+      "mesh": "mesh0282",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_LampCeilingA_356/SM_LampCeilingA_04/Section1",
+      "mesh": "mesh0283",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallWire_54/SM_WallWire_09",
+      "mesh": "mesh0284",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallWire_55/SM_WallWire_09",
+      "mesh": "mesh0285",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/SM_WallWire_56/SM_WallWire_09",
+      "mesh": "mesh0286",
+      "collision": true,
+      "visible": true
+    },
+    {
+      "prim": "/Root/Root/GroundPlane/CollisionMesh",
+      "mesh": "mesh0287",
+      "collision": false,
+      "visible": false
+    },
+    {
+      "prim": "/crazyflie/body/body_visual/battery_holder",
+      "mesh": "mesh0288",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/body/body_visual/pin_headers",
+      "mesh": "mesh0289",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/body/body_visual/battery",
+      "mesh": "mesh0290",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/body/body_visual/cf_body_001",
+      "mesh": "mesh0291",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/body/body_visual/Cylinder",
+      "mesh": "mesh0292",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/body/body_visual/motor_mount",
+      "mesh": "mesh0293",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/m1_prop/ccw_prop",
+      "mesh": "mesh0294",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/m2_prop/cw_prop",
+      "mesh": "mesh0295",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/m3_prop/ccw_prop",
+      "mesh": "mesh0296",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/crazyflie/m4_prop/cw_prop",
+      "mesh": "mesh0297",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0298",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0299",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0300",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0301",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0302",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0303",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0304",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0305",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0306",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0307",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0308",
+      "collision": false,
+      "visible": true
+    },
+    {
+      "prim": "/root/Cube/Cube",
+      "mesh": "mesh0309",
+      "collision": false,
+      "visible": true
+    }
+  ],
+  "textures": [
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Materials/Textures/T_Floor_01_D.png",
+      "file": "textures/81d7488f559b.png",
+      "sha256": "e1c2dce6aa3438248ad3c960cba22c4160d9a86c152a978f6f228b8a99770834"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Materials/Textures/T_CeilingA_D.png",
+      "file": "textures/b11888927f3c.png",
+      "sha256": "fd9f0d2f6e774981506cff5fe23716abfa3d5f92e1c1ae15392f311f81c2925f"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Materials/Textures/T_WallA_01_D.png",
+      "file": "textures/11dbfc4c0f3f.png",
+      "sha256": "7c102157a73b034966bbc5e96323cac2177147b72b70e06625423320f82d7297"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Materials/Textures/T_BeamsA_D.png",
+      "file": "textures/c19d0105b81b.png",
+      "sha256": "8a433ae32888ed7dcac16e2cc08372dc79bf9a4367c6f3a63023bad807fbd866"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Materials/Textures/T_LampCeilingA_D.png",
+      "file": "textures/f05ece705e83.png",
+      "sha256": "537c6b009dd38b2059b0f1ee51c874fce344cccfe9177c8113f7dbc7b2950944"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Simple_Warehouse/Materials/Textures/T_WallDetails_D.png",
+      "file": "textures/6e46fda24657.png",
+      "sha256": "ab1ef0bc07324394ebff7f4b7f879fa0242261d36cca9c875ab1bb3bbc8910bb"
+    }
+  ],
+  "notes": [
+    "MuJoCo shading approximates USD/MDL; geometry is converted from source.",
+    "Gate visual mesh is original; collision uses four bars to preserve the opening.",
+    "Coplanar source meshes receive 0.1mm extrusion for MuJoCo mesh compilation."
+  ],
+  "bodies": [
+    {
+      "name": "body",
+      "mass": 0.02500000037252903,
+      "inertia": [
+        1.6571999367442913e-05,
+        1.665600029809866e-05,
+        2.9262000680319034e-05
+      ]
+    },
+    {
+      "name": "m1_prop",
+      "mass": 0.0007999999797903001,
+      "inertia": [
+        1.999999943436137e-09,
+        1.6699999605407356e-07,
+        1.679999996895276e-07
+      ]
+    },
+    {
+      "name": "m2_prop",
+      "mass": 0.0007999999797903001,
+      "inertia": [
+        1.999999943436137e-09,
+        1.6699999605407356e-07,
+        1.679999996895276e-07
+      ]
+    },
+    {
+      "name": "m3_prop",
+      "mass": 0.0007999999797903001,
+      "inertia": [
+        1.999999943436137e-09,
+        1.6699999605407356e-07,
+        1.679999996895276e-07
+      ]
+    },
+    {
+      "name": "m4_prop",
+      "mass": 0.0007999999797903001,
+      "inertia": [
+        1.999999943436137e-09,
+        1.6699999605407356e-07,
+        1.679999996895276e-07
+      ]
+    }
+  ]
+}

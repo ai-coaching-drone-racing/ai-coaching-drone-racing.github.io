@@ -1,0 +1,14 @@
+{
+  "mujoco": "3.13.0",
+  "scene_sha256": "f2559a6eca3ebb8b9607627c16b7272c8c304eabe0071ac290859cffd4a6a803",
+  "expert": {
+    "layers": 3,
+    "activation": "elu",
+    "source": "assets/checkpoints/base_policy_rsl/model_9999.pt",
+    "sha256": "e856f8835eb8e0ebc4de404a415e7c7bbe2070cb46d5bf0620733894f3b3fb67",
+    "iteration": 9999,
+    "observation_normalization": false
+  },
+  "physics_bytes": 4629120,
+  "render_only_changes": "Browser lighting and exposure; physics unchanged"
+}

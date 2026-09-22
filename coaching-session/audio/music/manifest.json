@@ -1,0 +1,44 @@
+[
+  {
+    "file": "music/hci-bgm-1.mp3",
+    "title": "Gaijin Entertainment,Jimmie Asche,Nikita Mokrov - 40,000 Feet over the Prairies",
+    "seconds": 372.976327,
+    "sourceSha256": "360d74febf7c697624fb37d966ae2f5c992299008d9338e66c4d81cc71572d47",
+    "sha256": "15aff80fc55041c49f9e8e8faaaa5060a37d94e304f980de7c82ab67f30a014a"
+  },
+  {
+    "file": "music/hci-bgm-2.mp3",
+    "title": "Gaijin Entertainment,Jimmie Asche,Nikita Mokrov - Bandit at 6 O_clock",
+    "seconds": 291.866122,
+    "sourceSha256": "5a08259cf3a9c80a77523c9914f494bc3abcf2eb70bb87adb0969255285a0709",
+    "sha256": "10c3b598d6f0eef0e38b091d683d5b87a1d3f42f2028363d95e2e8e14fed646f"
+  },
+  {
+    "file": "music/hci-bgm-3.mp3",
+    "title": "Gaijin Entertainment,Jimmie Asche,Nikita Mokrov - Frontal Attack",
+    "seconds": 344.555102,
+    "sourceSha256": "97c854b8e39b936444127445b2c0b7d6b372bfff4941deb93dff376c80605771",
+    "sha256": "23f1b9b46a3269602034cce4a0150d4193f83e1c9ea6e254653c331505f87d4c"
+  },
+  {
+    "file": "music/hci-bgm-4.mp3",
+    "title": "Gaijin Entertainment,Jimmie Asche,Nikita Mokrov - Interdiction",
+    "seconds": 276.27102,
+    "sourceSha256": "88631643e5c6a846ab4eacc807eebc3b21b0c0a119b17aadd5e95aecf669933c",
+    "sha256": "e03f48a536228271efa478645612d9c2c9a7374f91c7c05892d936872a67c33e"
+  },
+  {
+    "file": "music/hci-bgm-5.mp3",
+    "title": "Gaijin Entertainment,Jimmie Asche,Nikita Mokrov - Through the Clouds",
+    "seconds": 264.907755,
+    "sourceSha256": "259a1188cbb78b1151e2a4a5c2cc8bf689424b9b58425fd934fc5f27633e3704",
+    "sha256": "6629a3274664402d01d89fb28782b5621ecc1644b3838a6b4ae43ee5321fd0d0"
+  },
+  {
+    "file": "music/hci-bgm-6.mp3",
+    "title": "Gaijin Entertainment,Jimmie Asche,Nikita Mokrov - Waltz of the Tornado",
+    "seconds": 293.616327,
+    "sourceSha256": "2e91044ca725c4f486b9ad2f878ef147bc310f5d0e7fa16c468deb1d2bb1652f",
+    "sha256": "89627d8e12c11acf05155b87e0a6e1c44c4cbb8433caef462c48d1b2119f6e3b"
+  }
+]
