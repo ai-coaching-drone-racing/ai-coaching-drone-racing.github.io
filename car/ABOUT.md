@@ -55,4 +55,4 @@ Physical gamepad hardware and real camera feeds have not been verified on this m
 
 ## Dependencies
 
-MuJoCo 3.13.0 (Apache-2.0), Three.js 0.183.2 (MIT), Lucide 0.577.0 (ISC). Copies of their licenses are included in `licenses/`. The `vehicle/` folder includes the xLab pit mesh's Apache-2.0 license and the AutoDRIVE visual model's BSD-2-Clause license. Penn logo provenance is in `venue/README.md`; other venue logos were provided by the project owner.
+MuJoCo 3.13.0 (Apache-2.0), Three.js 0.183.2 (MIT), Lucide 0.577.0 (ISC). Copies of their licenses are included in `licenses/`. The `vehicle/` folder includes the xLab pit mesh's Apache-2.0 license and the AutoDRIVE visual model's BSD-2-Clause license. The unused Penn logo asset is documented in `venue/README.md`; other venue logos were provided by the project owner.

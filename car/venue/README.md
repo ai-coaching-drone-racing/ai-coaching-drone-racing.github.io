@@ -1,9 +1,9 @@
-# Penn wall logo
+# Retained Penn logo asset
 
 `penn-logo.png` is the unmodified Penn shield-and-wordmark image already used
 by the drone demo, copied here on 2026-09-11. Its native 5:3 aspect ratio and
-white clear space are preserved. The car prototype displays it on both long
-side walls; these are renderer-only panels, not collision geometry.
+white clear space are preserved. The car prototype no longer displays it.
+Both long side walls show the same AI Coaching wordmark.
 
 - Source page: https://branding.web-resources.upenn.edu/logos-and-branding/download-penn-logos
 - Asset: https://branding.web-resources.upenn.edu/sites/default/files/2022-03/UniversityofPennsylvania_SimplifiedLogo_RGB-2.png
