@@ -7,7 +7,8 @@ A browser-only **3D driving practice prototype**, based on the size and interfac
 - A free 6-DOF chassis, four rotating tires, spring/damper suspension, two front steering joints, rear wheel motors, ground friction, and solid course barriers.
 - Ackermann steering derived from a 0.324 m wheelbase and 0.255 m wheel tread; 0.055 m wheel radius. These dimensions come from xLab's vehicle description.
 - The active car uses AutoDRIVE's F1TENTH CAD, converted to a compact GLB with four independently moving wheels. This imports the visual model, **not Unity/PhysX or the AutoDRIVE controller**. Provenance, modifications and BSD-2-Clause license are under `vehicle/autodrive/`.
-- Manual keyboard, touch, and standard-mapped browser gamepad controls. Unknown gamepad mappings are not activated.
+- Manual keyboard, mouse drag, touch, and standard-mapped browser gamepad controls. Hold the desktop steering slider to take mouse steering priority; release it to return to the most recently pressed keyboard steering key. Unknown gamepad mappings are not activated.
+- Steering authority decreases with speed to prevent full-lock keyboard inputs from rolling the vehicle at the 7 m/s manual limit. This is a simulation safety control, not a validated real-car steering map.
 - Chase, onboard RGB-style perspective, and circuit cameras. The onboard view is a synthetic monocular rendering, **not a calibrated ZED stereo/depth sensor**.
 - Camera placement uses the published ZED X Mini body mount, converted from the rear-axle-ground `base_link` frame to the simulator root. The extra camera housing is illustrative. CAD electronics/sensor details are not a measured replica of xLab's current car; camera intrinsics remain uncalibrated.
 - Authored practice circuit with straights and connected corners in a 3D room. This flat-ground practice layout is not an imported map of the lab.
