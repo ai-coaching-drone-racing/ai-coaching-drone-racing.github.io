@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&family=Castoro&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260925-notice" />
+  <link rel="stylesheet" href="styles.css?v=20260925-news" />
   <script>
     window.MathJax = {
       tex: {
@@ -98,7 +98,15 @@
         <p class="paper-link-row">
           <a href="https://arxiv.org/abs/2606.25337">Paper</a>
         </p>
-        <p class="publication-notice"><strong>September 2026:</strong> Our paper was accepted to CoRL 2026 <img class="acceptance-icon" src="assets/celebration.svg" alt="🎉" />; we will present it at five IROS 2026 workshops, including an oral presentation at <a href="https://nocworkshop.github.io/2026-IROS/">NoC</a>.</p>
+        <div class="publication-news" aria-label="News">
+          <p id="corl-news" hidden><time datetime="2026-10">Oct 2026</time><span>Our paper was accepted to <a href="https://www.corl.org/">CoRL 2026</a> <img class="acceptance-icon" src="assets/celebration.svg" alt="🎉" />.</span></p>
+          <p><time datetime="2026-09">Sep 2026</time><span>We present AI Coaching at IROS 2026 workshops (<a href="https://nocworkshop.github.io/2026-IROS/">NoC</a> <strong>(oral)</strong>, <a href="https://sites.google.com/bu.edu/hybridarchforautonomy/home">BLPC</a>, <a href="https://embodied-nesy.github.io/">ReS-AI</a>, <a href="https://physcollabot.github.io/">PhysCollaBot</a>, <a href="https://chuchuchen.net/robotworker-26/">Full-Shift</a>).</span></p>
+        </div>
+        <script>
+          if (new Date() >= new Date(2026, 9, 1)) {
+            document.getElementById("corl-news").hidden = false;
+          }
+        </script>
       </div>
 
       <p class="lead">

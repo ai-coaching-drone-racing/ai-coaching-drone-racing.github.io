@@ -388,11 +388,11 @@ h1 {
   text-decoration-color: var(--penn-red);
 }
 
-.publication-notice {
+.publication-news {
   max-width: 860px;
   margin: 26px auto 0;
   border-left: 4px solid var(--penn-red);
-  padding: 14px 18px;
+  padding: 5px 18px;
   background: var(--penn-red-soft);
   color: var(--ink);
   font-family: var(--font-heading);
@@ -401,11 +401,29 @@ h1 {
   text-align: left;
 }
 
-.publication-notice strong {
-  color: var(--penn-red);
+.publication-news p {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 9px 0;
 }
 
-.publication-notice a {
+.publication-news p[hidden] {
+  display: none;
+}
+
+.publication-news p:not([hidden]) + p {
+  border-top: 1px solid rgba(153, 0, 0, 0.18);
+}
+
+.publication-news time,
+.publication-news strong {
+  color: var(--penn-red);
+  font-weight: 800;
+}
+
+.publication-news a {
   color: var(--penn-blue);
   font-weight: 700;
   text-decoration: underline;
