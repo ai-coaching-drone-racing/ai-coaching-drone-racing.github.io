@@ -181,20 +181,10 @@ a {
   text-align: center;
 }
 
-.acceptance-announcement {
-  margin: 0 0 20px;
-  font-family: var(--font-heading);
-  font-size: clamp(17px, 2vw, 22px);
-  font-weight: 800;
-  line-height: 1.3;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
-}
-
 .acceptance-icon {
-  width: 1.15em;
-  height: 1.15em;
-  margin-left: 0.15em;
-  vertical-align: -0.17em;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.16em;
 }
 
 .hero-intro {
@@ -396,6 +386,30 @@ h1 {
 .paper-link-row a:focus-visible {
   color: var(--penn-red);
   text-decoration-color: var(--penn-red);
+}
+
+.publication-notice {
+  max-width: 860px;
+  margin: 26px auto 0;
+  border-left: 4px solid var(--penn-red);
+  padding: 14px 18px;
+  background: var(--penn-red-soft);
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.publication-notice strong {
+  color: var(--penn-red);
+}
+
+.publication-notice a {
+  color: var(--penn-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .lead {
