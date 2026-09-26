@@ -7,6 +7,7 @@ A browser-only **3D driving practice prototype**, based on the size and interfac
 - A free 6-DOF chassis, four rotating tires, spring/damper suspension, two front steering joints, rear wheel motors, ground friction, and solid course barriers.
 - Ackermann steering derived from a 0.324 m wheelbase and 0.255 m wheel tread; 0.055 m wheel radius. These dimensions come from xLab's vehicle description.
 - The active car uses AutoDRIVE's F1TENTH CAD, converted to a compact GLB with four independently moving wheels. This imports the visual model, **not Unity/PhysX or the AutoDRIVE controller**. Provenance, modifications and BSD-2-Clause license are under `vehicle/autodrive/`.
+- Each visual tire is centered at its physical hub and its baked axle tilt is corrected before the MuJoCo steering/roll transforms are applied. This removes mesh-induced wobble without changing suspension, joints or dynamics. The approach follows the axle-alignment fix in [f1tenth_gym_ros 46c23ea](https://github.com/f1tenth/f1tenth_gym_ros/commit/46c23ea0e58f4d695cb21dc0ba34e94a89d0d817), with new measurements for this asset rather than copying another model's angles.
 - Manual keyboard, mouse drag, touch, and standard-mapped browser gamepad controls. Hold the desktop steering slider to take mouse steering priority; release it to return to the most recently pressed keyboard steering key. Unknown gamepad mappings are not activated.
 - Steering authority decreases with speed to prevent full-lock keyboard inputs from rolling the vehicle at the 7 m/s manual limit. This is a simulation safety control, not a validated real-car steering map.
 - Chase, onboard RGB-style perspective, and circuit cameras. The onboard view is a synthetic monocular rendering, **not a calibrated ZED stereo/depth sensor**.
@@ -52,6 +53,17 @@ Confirm the exact small car and camera with the lab, then measure steering calib
 A future integration needs an authenticated local ROS 2 bridge to the vehicle interface, independent command timeout, bounded speed/steering, a physical emergency stop and a supervised closed course. **No such bridge or remote motor control is enabled here.** Do not expose a bare car control socket on a public static page.
 
 Physical gamepad hardware and real camera feeds have not been verified on this machine. Browser tests use simulated standard gamepad events.
+
+## September 26 Policy Refresh
+
+After the visual wheel repair, both browser networks were refitted with seed 18
+on the unchanged MuJoCo physics. Driver fitting reused the retained 11,980-row
+dataset; Coach fitting used 1,048 newly generated branched-rollout examples.
+At the validated 1.4-2 m/s limits, 24 new synthetic cases gave 24/24 autonomous
+laps, 23/24 adaptive, 24/24 fixed 50%, 22/24 fixed 85%, and 11/24 without help.
+Adaptive used 24.4% mean assistance. These are same-track synthetic driving
+results, not evidence of human learning, real-car transfer or a universally
+better assistance policy. Manual driving's 7 m/s ceiling is unchanged.
 
 ## Dependencies
 
