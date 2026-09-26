@@ -54,7 +54,7 @@ A future integration needs an authenticated local ROS 2 bridge to the vehicle in
 
 Physical gamepad hardware and real camera feeds have not been verified on this machine. Browser tests use simulated standard gamepad events.
 
-## September 26 Policy Refresh
+## Earlier September 26 Policy Refresh
 
 After the visual wheel repair, both browser networks were refitted with seed 18
 on the unchanged MuJoCo physics. Driver fitting reused the retained 11,980-row
@@ -64,6 +64,23 @@ laps, 23/24 adaptive, 24/24 fixed 50%, 22/24 fixed 85%, and 11/24 without help.
 Adaptive used 24.4% mean assistance. These are same-track synthetic driving
 results, not evidence of human learning, real-car transfer or a universally
 better assistance policy. Manual driving's 7 m/s ceiling is unchanged.
+
+## Physical Wheel Contact Follow-Up
+
+The CAD source matches the current AutoDRIVE simulator branch. A separate
+defect was found in this prototype's MuJoCo contact setup: steered front tires
+were colliding with the coarse chassis box. Four body-pair exclusions now
+prevent internal chassis/wheel interference; ground and wall collisions remain
+active. A matched slalom regression reduced peak steering jump by 88.1%, with
+zero remaining internal-contact frames. It does not eliminate normal suspension
+travel, collision impacts or every possible vibration.
+
+Both networks were retrained with seed 19 on fresh corrected-physics datasets
+(17,500 driving rows and 1,080 branched assistance rows). On 24 new synthetic
+cases at 1.4-2 m/s, Auto, Adaptive and both fixed-help conditions each completed
+24/24 laps; no help completed 18/24. Adaptive averaged 24.2% help. The previous
+paragraph reports a different, earlier physics/seed cohort and is not a direct
+causal comparison. No human-learning or real-car benefit is established.
 
 ## Dependencies
 

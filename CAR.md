@@ -4,7 +4,7 @@ Live path: https://ai-coaching-drone-racing.github.io/car/
 
 This is a standalone static MuJoCo WASM / Three.js 3D driving prototype. It does not replace the drone demo and is not linked from the paper homepage yet.
 
-Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `6924cd3`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The diagnosis, policy provenance and refresh protocol are in `car_mujoco/WHEEL_FIX.md`.
+Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `7054a38`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The latest diagnosis, upstream audit and fresh-data retraining protocol are in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
 
 Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions documented by xLab's Autoware vehicle package. xLab's architecture documentation explicitly includes a ZED X Mini camera and real motor/servo interfaces. This establishes a plausible future hardware route, not an inventory confirmation or sim-to-real validation.
 
@@ -22,7 +22,35 @@ Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions docum
 
 Details, platform evidence and license links: [car/ABOUT.md](car/ABOUT.md).
 
-## September 26 Wheel Repair And Policy Refresh
+## Current Physical Contact Fix
+
+The pinned AutoDRIVE F1TENTH FBX matches the current upstream simulator branch
+exactly (Git blob `41d2e73c`). No newer CAD replacement was found. The remaining
+confirmed defect was in this prototype's MuJoCo collision setup: steering
+front tires repeatedly collided with the coarse chassis box.
+
+Four explicit chassis/wheel exclusions now prevent that internal interference,
+without disabling ground or external wall collisions. A matched slalom test
+dropped internal-contact frames from 1,468/1,600 to zero and reduced peak
+steering jump from 0.086719 to 0.010288 radians, an 88.1% reduction. Normal
+suspension movement and real collision impacts are not suppressed.
+
+The physics XML changed, so both datasets were regenerated before training
+seed-19 weights: 17,500 driving examples and 1,080 assistance examples. All 16
+development laps passed without contact. On 24 fresh synthetic cases at
+1.4-2 m/s, Auto, Adaptive, fixed 50% and fixed 85% each completed 24/24 laps;
+no help completed 18/24. Adaptive averaged 24.2% assistance. These are driving
+checks, not proof of human learning or a calibrated real-car model.
+
+Current physics XML SHA-256:
+`319f83f4c46c6665c3b027f59796d920d27fd2d337ddf910ee1ca7aa5f5ce2ab`.
+The complete diagnosis, upstream audit, negative high-speed fixture result,
+protocol and metrics are in `car_mujoco/SELF_CONTACT_FIX.md` and
+`car_mujoco/validation/2026-09-26-self-contact/` in the source repository.
+Manual 7 m/s laps remain unvalidated; Auto and assistance remain capped at
+2 m/s. The earlier figures below describe previous physics and cohorts.
+
+## Earlier September 26 Visual Wheel Repair
 
 The MuJoCo frame/suspension/hub/wheel connections were already valid. The CAD
 tire meshes carried small baked axle tilts, which made them wobble visually when
