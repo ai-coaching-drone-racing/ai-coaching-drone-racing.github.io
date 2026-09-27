@@ -4,7 +4,7 @@ Live path: https://ai-coaching-drone-racing.github.io/car/
 
 This is a standalone static MuJoCo WASM / Three.js 3D driving prototype. It does not replace the drone demo and is not linked from the paper homepage yet.
 
-Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `217f0e9`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The latest chase-camera repair and full-range Auto protocol are in `car_mujoco/CHASE_CAMERA_AND_SPEED.md`. The physical contact audit is in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
+Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `be23ba1`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The latest chase-camera repair and full-range Auto protocol are in `car_mujoco/CHASE_CAMERA_AND_SPEED.md`. The physical contact audit is in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
 
 Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions documented by xLab's Autoware vehicle package. xLab's architecture documentation explicitly includes a ZED X Mini camera and real motor/servo interfaces. This establishes a plausible future hardware route, not an inventory confirmation or sim-to-real validation.
 
@@ -39,6 +39,14 @@ trials (24 at each 1-7 m/s setting) passed without contact. At a 7 m/s ceiling,
 mean final lap time was 31.34 s and peak speed 4.61 m/s, versus 37.79 s and
 1.93 m/s at 2 m/s. The ceiling is not a constant speed; corner braking remains
 conservative, and this is not a time-optimal racing or real-car safety claim.
+
+The speed HUD now uses m/s, consistent with settings and exported telemetry.
+Manual full throttle requests the selected ceiling; Auto instead requests
+the conservative reference speed learned through imitation. Its reference
+uses a 1.0 m/s^2 lateral-acceleration budget, anticipatory braking and an
+extra steering-dependent slowdown. Higher manual speed is therefore possible
+without any different physical speed cap. No policy weights or dynamics
+changed in the unit-display update.
 
 `car/policies/fast-driver.json` is only used for autonomous control/manual
 expert previews. The original driver/Coach in `driving-coach.json` is

@@ -98,6 +98,10 @@ development laps, 12 three-lap endurance runs, and all 168 locked final trials
 time was 31.34 s and peak observed speed was 4.61 m/s; at 2 m/s, 37.79 s and
 1.93 m/s. The short track requires braking, so the ceiling is not a constant
 speed or a time-optimal-racing claim. These are same-track simulations only.
+The HUD, speed settings and exported telemetry all use m/s. Auto still clones
+a conservative reference with anticipatory braking and steering-dependent
+speed reductions; full manual throttle can request more speed than Auto.
+The current Auto is not trained to minimize lap time.
 The original driver/Coach weights and assisted/practice 2 m/s cap are unchanged.
 
 ## Dependency Licenses
