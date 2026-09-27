@@ -4,7 +4,7 @@ Live path: https://ai-coaching-drone-racing.github.io/car/
 
 This is a standalone static MuJoCo WASM / Three.js 3D driving prototype. It does not replace the drone demo and is not linked from the paper homepage yet.
 
-Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `be23ba1`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The latest chase-camera repair and full-range Auto protocol are in `car_mujoco/CHASE_CAMERA_AND_SPEED.md`. The physical contact audit is in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
+Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `3751419`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The current faster Auto training and matched-start validation are in `car_mujoco/RACING_AUTO.md`; the earlier chase-camera/full-range protocol is in `car_mujoco/CHASE_CAMERA_AND_SPEED.md`. The physical contact audit is in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
 
 Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions documented by xLab's Autoware vehicle package. xLab's architecture documentation explicitly includes a ZED X Mini camera and real motor/servo interfaces. This establishes a plausible future hardware route, not an inventory confirmation or sim-to-real validation.
 
@@ -23,7 +23,26 @@ Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions docum
 
 Details, platform evidence and license links: [car/ABOUT.md](car/ABOUT.md).
 
-## September 27 Camera and Faster Auto
+## Current Faster Auto
+
+The autonomous driver now imitates a faster pure-pursuit profile selected by
+development-set lap time. It is still imitation learning, not RL. On 72
+matched-start held-out laps (24 each at 2, 4 and 7 m/s), the new and previous
+drivers both completed 72/72 cleanly. At the 7 m/s setting, the new driver
+averaged 22.99 s/lap versus 31.29 s, a 26.5% shorter lap. Four separate
+three-lap endurance runs also finished cleanly. The new driver takes a wider
+line: maximum centerline offset was 0.564 m versus 0.217 m, within the
+predeclared 0.82 m threshold.
+
+This is **not unlimited speed**. The rear-motor target is capped at 140 rad/s
+in the unchanged MuJoCo model; even a 12 m/s command achieved only about
+6.73 m/s on a straight. Raising the UI setting alone cannot remove that
+physical limit. The Coach and assisted/practice 2 m/s envelope are unchanged.
+The result is for this authored circuit, not a real car or unseen tracks.
+Full protocol, negative profile results, reports and browser screenshot are
+in `car_mujoco/RACING_AUTO.md` and its validation directory in the source repo.
+
+## Earlier September 27 Camera and Full-Range Auto
 
 Chase now tracks the same interpolated pose as the chassis and all wheels,
 with a shared position/look target and fixed 68 degree FOV. This removes

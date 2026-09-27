@@ -84,7 +84,7 @@ cases at 1.4-2 m/s, Auto, Adaptive and both fixed-help conditions each completed
 paragraph reports a different, earlier physics/seed cohort and is not a direct
 causal comparison. No human-learning or real-car benefit is established.
 
-## September 27 Chase Camera and Faster Auto
+## Earlier September 27 Chase Camera and Full-Range Auto
 
 The chase camera now follows the interpolated car/wheel pose without
 independent translation/target lag or speed-based zoom. Onboard keeps its
@@ -101,8 +101,27 @@ speed or a time-optimal-racing claim. These are same-track simulations only.
 The HUD, speed settings and exported telemetry all use m/s. Auto still clones
 a conservative reference with anticipatory braking and steering-dependent
 speed reductions; full manual throttle can request more speed than Auto.
-The current Auto is not trained to minimize lap time.
+That earlier Auto had not been selected for lap time.
 The original driver/Coach weights and assisted/practice 2 m/s cap are unchanged.
+
+## Current Faster Auto
+
+The current Auto clones a development-selected, faster pure-pursuit controller
+in the same 3D MuJoCo physics. It is still imitation learning, not PPO/SAC or
+an unrestricted-speed policy. The motor target is capped at 140 rad/s, so
+lifting the UI limit cannot provide unlimited speed. No physical parameters
+were changed; the 7 m/s speed setting and 2 m/s assisted/practice envelope
+remain as before.
+
+On 72 matched held-out one-lap trials (24 each at 2, 4 and 7 m/s), the new
+Auto completed 72/72 without contact. At the 7 m/s setting, its mean lap was
+22.99 s versus 31.29 s for the prior Auto; peak measured speed was 5.10 m/s
+versus 4.16 m/s. Four separate three-lap endurance runs also finished cleanly.
+The newer policy uses more of the available track width: maximum centerline
+offset at 7 m/s was 0.56 m versus 0.22 m for the prior Auto, both under the
+0.82 m evaluation threshold. This is a known-circuit simulation result, not
+proof of globally optimal racing or safe performance on other tracks or hardware.
+The original driving-assistance and Coach weights are unchanged.
 
 ## Dependency Licenses
 
