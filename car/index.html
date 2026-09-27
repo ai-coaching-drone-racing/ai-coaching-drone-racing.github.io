@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#011f5b"/><meta name="darkreader-lock"/><title>AI Coaching | Driving Lab</title><link rel="icon" href="data:,"/>  <script type="module" crossorigin src="/car/assets/index-BksMPF2Y.js"></script>
-  <link rel="stylesheet" crossorigin href="/car/assets/index-B9cmS5Ez.css">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#011f5b"/><meta name="darkreader-lock"/><title>AI Coaching | Driving Lab</title><link rel="icon" href="data:,"/>  <script type="module" crossorigin src="/car/assets/index-CA2fE-5K.js"></script>
+  <link rel="stylesheet" crossorigin href="/car/assets/index-Cx9lZ_3p.css">
 </head>
 <body>
   <canvas id="world" aria-label="Three-dimensional RoboRacer driving circuit"></canvas>
@@ -13,6 +13,13 @@
   <aside class="telemetry" aria-label="Driving telemetry">
     <div class="speed"><strong id="speed">0.0</strong><span>km/h</span></div>
     <dl><div><dt>LAP</dt><dd id="laps">0</dd></div><div><dt>TIME</dt><dd id="timer">0:00.0</dd></div><div><dt>BEST</dt><dd id="best">--</dd></div><div><dt>CONTACTS</dt><dd id="hits">0</dd></div><div><dt>ASSISTANCE</dt><dd id="assistance">0%</dd></div></dl>
+    <div class="lap-progress"><div><span id="lap-progress-label">LAP PROGRESS</span><output id="lap-percent">0.0%</output></div><progress id="lap-progress" max="1" value="0" aria-label="Lap progress"></progress></div>
+  </aside>
+  <aside id="expert-actions" class="expert-actions" aria-label="Expert action display">
+    <h2>Expert actions</h2><div class="command-legend"><span class="human">You</span><span class="expert">Expert</span></div>
+    <div class="command-row"><span>Steering</span><div class="command-track steering"><b data-command="steer-human" class="human" role="img"></b><b data-command="steer-expert" class="expert" role="img"></b></div><div class="command-endpoints"><span>L</span><span>R</span></div></div>
+    <div class="command-row"><span>Throttle</span><div class="command-track"><b data-command="throttle-human" class="human" role="img"></b><b data-command="throttle-expert" class="expert" role="img"></b></div></div>
+    <div class="command-row"><span>Brake</span><div class="command-track"><b data-command="brake-human" class="human" role="img"></b><b data-command="brake-expert" class="expert" role="img"></b></div></div>
   </aside>
   <div id="paused" class="pause-state"><i data-lucide="pause"></i><span>Paused</span></div>
   <div id="loading" role="status">Loading circuit...</div>
@@ -50,6 +57,7 @@
     <p class="speed-note">Auto, assistance and practice tests are limited to 2.0 m/s.</p>
     <label class="setting">Fixed assistance <output id="assist-label">85%</output><input id="fixed-assistance" type="range" min="0" max="1" step=".05" value=".85"/></label>
     <label class="check"><input id="reference-line" type="checkbox"/>Reference line</label>
+    <label class="check"><input id="expert-cues" type="checkbox" checked/>Expert actions</label>
     <div class="session-actions"><button id="il-drive" disabled><i data-lucide="play"></i>IL driver</button><button id="practice-session" disabled><i data-lucide="timer"></i>Practice & test</button></div>
     <button id="reset-session"><i data-lucide="rotate-ccw"></i>New session</button>
     <a class="about" href="./ABOUT.md" target="_blank" rel="noopener">Platform, sources & limitations</a>

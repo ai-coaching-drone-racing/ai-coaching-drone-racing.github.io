@@ -4,7 +4,7 @@ Live path: https://ai-coaching-drone-racing.github.io/car/
 
 This is a standalone static MuJoCo WASM / Three.js 3D driving prototype. It does not replace the drone demo and is not linked from the paper homepage yet.
 
-Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `7054a38`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The latest diagnosis, upstream audit and fresh-data retraining protocol are in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
+Current source: `Waybaba/ai_coaching`, branch `codex/car-wheel-axis-fix`, commit `217f0e9`, directory `car_mujoco/`; reproducible hardware profile in `car_autodrive/`. The latest chase-camera repair and full-range Auto protocol are in `car_mujoco/CHASE_CAMERA_AND_SPEED.md`. The physical contact audit is in `car_mujoco/SELF_CONTACT_FIX.md`; the earlier visual correction is in `car_mujoco/WHEEL_FIX.md`.
 
 Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions documented by xLab's Autoware vehicle package. xLab's architecture documentation explicitly includes a ZED X Mini camera and real motor/servo interfaces. This establishes a plausible future hardware route, not an inventory confirmation or sim-to-real validation.
 
@@ -12,7 +12,8 @@ Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions docum
 - Keyboard, standard browser gamepad and touch input; Chase, Onboard and Circuit views.
 - Visible Controls panel, pause, recovery, speed limit and session JSON export.
 - Controls automatically scans for late-connected/reconnected gamepads every 100 ms, independently of rendering. Opening or returning focus scans immediately; closing or hiding the page stops the extra timer. Browser activation may still require a controller button press. PlayStation R2/L2 labels accompany RT/LT; controller mappings are unchanged.
-- No Coach, Fixed Assist (0-100%) and a trained Adaptive Coach, with a live assistance percentage. The controller never applies throttle to an idle driver and never cancels braking. Manual mode offers a 7 m/s ceiling; autonomous, assisted and practice modes remain capped at the validated 2 m/s ceiling.
+- No Coach, Fixed Assist (0-100%) and a trained Adaptive Coach, with a live assistance percentage. The controller never applies throttle to an idle driver and never cancels braking. Manual and separately trained Auto offer a 7 m/s ceiling; assisted and practice modes retain the validated 2 m/s envelope. Auto brakes for corners and falls back to the old 2 m/s driver if the fast bundle cannot load.
+- Lap percentage with explicit invalid-lap status, plus user/expert steering, throttle and brake cues (toggle in Settings). Lap progress is evaluation/bookkeeping, not a training reward or policy input.
 - The IL driver clones pure pursuit with a 17-64-64-2 network. The 25-64-64-5 assistance network selects a blend using predicted short-horizon driving/intervention costs, vehicle state and recent human commands. Both were trained with the same MuJoCo WASM physics that run in the browser. They are NOT the original paper's PPO Expert, MIA or long-term-learning L2C; no human-learning benefit is established.
 - Settings offers autonomous IL driving and an optional 20 s solo / 60 s practice / 20 s solo session. Phase changes pause; solo tests share an initial state; outcomes and raw inputs can be exported. The inference-only models are public in `car/policies/`.
 - Authored practice track and room; not the original Isaac environment or a lab scan.
@@ -21,6 +22,29 @@ Vehicle choice: a small 1/10 RoboRacer-style vehicle, using the dimensions docum
 - No external services, credentials, inference server, camera permission or live-vehicle control.
 
 Details, platform evidence and license links: [car/ABOUT.md](car/ABOUT.md).
+
+## September 27 Camera and Faster Auto
+
+Chase now tracks the same interpolated pose as the chassis and all wheels,
+with a shared position/look target and fixed 68 degree FOV. This removes
+independent follow-camera lag and speed-dependent zoom pumping; onboard
+retains its body-mounted behavior. Desktop and mobile irregular-frame tests
+check camera/car relative translation, visible motion, canvas pixels and HUD
+layout. These are not a hardware FPS benchmark.
+
+Fresh corrected-physics WASM examples train a standalone full-range IL driver:
+140,000 rows, episode-held-out validation, seed 23, 500 epochs on GPU 0.
+All 28 development laps, 12 three-lap endurance runs and 168 locked final
+trials (24 at each 1-7 m/s setting) passed without contact. At a 7 m/s ceiling,
+mean final lap time was 31.34 s and peak speed 4.61 m/s, versus 37.79 s and
+1.93 m/s at 2 m/s. The ceiling is not a constant speed; corner braking remains
+conservative, and this is not a time-optimal racing or real-car safety claim.
+
+`car/policies/fast-driver.json` is only used for autonomous control/manual
+expert previews. The original driver/Coach in `driving-coach.json` is
+unchanged, as are assisted/practice speed limits. Both bundles match the
+current MuJoCo XML. Full reports and screenshots are retained in the source
+repository's `car_mujoco/validation/2026-09-27-camera-speed/`.
 
 ## Current Physical Contact Fix
 
@@ -47,8 +71,9 @@ Current physics XML SHA-256:
 The complete diagnosis, upstream audit, negative high-speed fixture result,
 protocol and metrics are in `car_mujoco/SELF_CONTACT_FIX.md` and
 `car_mujoco/validation/2026-09-26-self-contact/` in the source repository.
-Manual 7 m/s laps remain unvalidated; Auto and assistance remain capped at
-2 m/s. The earlier figures below describe previous physics and cohorts.
+At that stage Auto and assistance were capped at 2 m/s. September 27 adds
+the separate validated full-range Auto described above; manual 7 m/s laps
+remain unvalidated. The earlier figures below describe historical cohorts.
 
 ## Earlier September 26 Visual Wheel Repair
 
