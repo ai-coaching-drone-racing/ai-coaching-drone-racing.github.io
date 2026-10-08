@@ -29,7 +29,7 @@
           policy: "\\pi",
           obsh: "o^{\\mathrm{H}}",
           obsr: "o^{\\mathrm{AI}}",
-          jstate: "\\mathbf{j}",
+          jstate: "\\bar{s}",
           discount: "\\gamma",
           expectation: "\\mathbb{E}",
           valfunc: "V",
@@ -191,11 +191,14 @@
       \;\middle|\;
       \begin{array}{l}
       a^{\mathrm{H}}_{t+k} \sim \pi^{\mathrm{H}}(\cdot \mid o^{\mathrm{H}}_{t+k}; \theta_{t+k}), \\[2pt]
-      j_{t+k+1} \sim P(\cdot \mid j_{t+k},
+      \bar{s}_{t+k+1} \sim P(\cdot \mid \bar{s}_{t+k},
       a^{\mathrm{H}}_{t+k}, a^{\mathrm{AI}}_{t+k}=0)
       \end{array}
       \right]
       \]
+      <p>
+        Here, \(\bar{s}:=(s,\theta)\) denotes the joint state: physical state \(s\) and skill level \(\theta\).
+      </p>
       <p>
         Intuitively, VoI asks: <em>if the coach were to walk away right now, how well would the learner perform?</em>
       </p>
