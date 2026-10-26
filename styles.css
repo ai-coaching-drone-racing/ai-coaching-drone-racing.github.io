@@ -589,7 +589,7 @@ figcaption {
   line-height: 1.5;
 }
 
-.youtube-embed {
+.presentation-video {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -601,50 +601,12 @@ figcaption {
   aspect-ratio: 16 / 9;
 }
 
-.youtube-embed iframe {
-  position: absolute;
-  inset: 0;
+.presentation-video video {
+  display: block;
   width: 100%;
   height: 100%;
   border: 0;
-}
-
-.yt-thumb {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.yt-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 68px;
-  height: 48px;
-  border: none;
-  border-radius: 12px;
-  background: #ff0000;
-  cursor: pointer;
-  opacity: 0.9;
-  transition: opacity 0.15s ease;
-}
-
-.yt-play::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  border-style: solid;
-  border-width: 10px 0 10px 18px;
-  border-color: transparent transparent transparent #ffffff;
-}
-
-.yt-play:hover {
-  opacity: 1;
+  object-fit: contain;
 }
 
 pre {
